@@ -1,15 +1,14 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { MagnifyingGlassIcon, ScaleIcon, RulerIcon } from '@heroicons/react/24/outline'
+import { motion, Variants } from 'framer-motion'
+import { MagnifyingGlassIcon, ScaleIcon } from '@heroicons/react/24/outline'
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   initial: { opacity: 0, y: 60 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
 }
 
-const staggerContainer = {
+const staggerContainer: Variants = {
   animate: {
     transition: {
       staggerChildren: 0.1
@@ -82,7 +81,7 @@ const dollSizes = [
 
 const measurementTips = [
   {
-    icon: RulerIcon,
+    icon: ScaleIcon,
     title: 'Use a Soft Measuring Tape',
     description: 'A flexible measuring tape will give you the most accurate measurements around curves.'
   },
