@@ -1,15 +1,41 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
+import Link from 'next/link'
+import Image from 'next/image'
 import { 
   MagnifyingGlassIcon,
   FunnelIcon,
   Squares2X2Icon,
   ListBulletIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  ArrowRightIcon,
+  AdjustmentsHorizontalIcon,
+  SparklesIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline'
+import { StarIcon } from '@heroicons/react/24/solid'
 import ProductCard from '../components/ProductCard'
+
+// Animation variants
+const fadeInUp: Variants = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+}
+
+const staggerContainer: Variants = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+}
+
+const scaleIn: Variants = {
+  initial: { opacity: 0, scale: 0.8 },
+  animate: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
+}
 
 // Mock products data - in a real app, this would come from an API
 const allProducts = [
@@ -121,6 +147,23 @@ const sortOptions = [
   { value: "newest", label: "Newest" }
 ]
 
+const filters = {
+  priceRanges: [
+    { label: 'Under $25', min: 0, max: 25 },
+    { label: '$25 - $50', min: 25, max: 50 },
+    { label: '$50 - $100', min: 50, max: 100 },
+    { label: 'Over $100', min: 100, max: Infinity }
+  ],
+  colors: [
+    { name: 'Black', value: '#000000' },
+    { name: 'White', value: '#FFFFFF' },
+    { name: 'Pink', value: '#FF69B4' },
+    { name: 'Blue', value: '#87CEEB' },
+    { name: 'Red', value: '#FF0000' },
+    { name: 'Gold', value: '#FFD700' }
+  ]
+}
+
 export default function ProductsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -162,79 +205,66 @@ export default function ProductsPage() {
   }, [searchQuery, selectedCategory, sortBy, priceRange])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900 py-8">
-      <div className="container-max">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <motion.h1 
-            className="text-4xl md:text-5xl font-bold text-secondary-900 dark:text-white mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+    <div className="min-h-screen pt-20">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-secondary-50 to-accent-50 dark:from-dark-900 dark:via-dark-800 dark:to-dark-900">
+        <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-10"></div>
+        
+        <div className="container-max section-padding relative">
+          <motion.div
+            className="text-center py-20"
+            initial="initial"
+            animate="animate"
+            variants={fadeInUp}
           >
-            Doll Fashion Collection
-          </motion.h1>
-          <motion.p 
-            className="text-lg text-secondary-600 dark:text-secondary-400 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
-            Discover our curated collection of adorable outfits for your beloved Labubu dolls
-          </motion.p>
-        </div>
-
-        {/* Search and Filters */}
-        <div className="mb-8">
-          {/* Search Bar */}
-          <div className="relative mb-6">
-            <MagnifyingGlassIcon className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-secondary-400" />
-            <input
-              type="text"
-              placeholder="Search for outfits, styles, colors..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-secondary-300 dark:border-dark-600 rounded-xl bg-white dark:bg-dark-700 text-secondary-900 dark:text-white placeholder-secondary-500 dark:placeholder-secondary-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-            />
-          </div>
-
-          {/* Filter Controls */}
-          <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
-            <div className="flex flex-wrap gap-4 items-center">
-              {/* Category Filter */}
-              <div className="flex gap-2 overflow-x-auto pb-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-full font-medium transition-all whitespace-nowrap ${
-                      selectedCategory === category
-                        ? 'bg-primary-500 text-white'
-                        : 'bg-secondary-100 dark:bg-dark-700 text-secondary-700 dark:text-secondary-300 hover:bg-primary-100 dark:hover:bg-dark-600'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
-
-              {/* Advanced Filters Toggle */}
-              <button
-                onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 border border-secondary-300 dark:border-dark-600 rounded-lg text-secondary-700 dark:text-secondary-300 hover:border-primary-400 transition-colors"
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <SparklesIcon className="h-8 w-8 text-primary-500" />
+              <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight">
+                <span className="gradient-text">All Products</span>
+              </h1>
+              <SparklesIcon className="h-8 w-8 text-primary-500" />
+            </div>
+            <p className="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed max-w-3xl mx-auto mb-8">
+              Discover our complete collection of premium fashion for your Labubu dolls. 
+              From casual wear to elegant pieces, find the perfect outfit for every style.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/collections"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
               >
-                <FunnelIcon className="h-4 w-4" />
-                Filters
-                <ChevronDownIcon className={`h-4 w-4 transition-transform ${showFilters ? 'rotate-180' : ''}`} />
-              </button>
+                View Collections
+                <ArrowRightIcon className="h-5 w-5" />
+              </Link>
+              <span className="text-secondary-500 dark:text-secondary-400">or browse all products below</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Search and Filter Bar */}
+      <section className="bg-white dark:bg-dark-900 border-b border-secondary-200 dark:border-dark-700 sticky top-20 z-40">
+        <div className="container-max section-padding">
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between py-4">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <MagnifyingGlassIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-secondary-400" />
+              <input
+                type="text"
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-2 border border-secondary-300 dark:border-dark-600 rounded-lg bg-white dark:bg-dark-800 text-secondary-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              />
             </div>
 
+            {/* Controls */}
             <div className="flex items-center gap-4">
-              {/* Sort Dropdown */}
+              {/* Sort */}
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-secondary-300 dark:border-dark-600 rounded-lg bg-white dark:bg-dark-700 text-secondary-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                className="px-4 py-2 border border-secondary-300 dark:border-dark-600 rounded-lg bg-white dark:bg-dark-800 text-secondary-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
                 {sortOptions.map((option) => (
                   <option key={option.value} value={option.value}>
@@ -243,133 +273,206 @@ export default function ProductsPage() {
                 ))}
               </select>
 
-              {/* View Mode Toggle */}
-              <div className="flex border border-secondary-300 dark:border-dark-600 rounded-lg overflow-hidden">
+              {/* View Mode */}
+              <div className="flex items-center border border-secondary-300 dark:border-dark-600 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 transition-colors ${
-                    viewMode === 'grid'
-                      ? 'bg-primary-500 text-white'
-                      : 'bg-white dark:bg-dark-700 text-secondary-600 dark:text-secondary-400 hover:bg-secondary-50 dark:hover:bg-dark-600'
-                  }`}
+                  className={`p-2 ${viewMode === 'grid' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-dark-800 text-secondary-600 dark:text-secondary-400'}`}
                 >
                   <Squares2X2Icon className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 transition-colors ${
-                    viewMode === 'list'
-                      ? 'bg-primary-500 text-white'
-                      : 'bg-white dark:bg-dark-700 text-secondary-600 dark:text-secondary-400 hover:bg-secondary-50 dark:hover:bg-dark-600'
-                  }`}
+                  className={`p-2 ${viewMode === 'list' ? 'bg-primary-500 text-white' : 'bg-white dark:bg-dark-800 text-secondary-600 dark:text-secondary-400'}`}
                 >
                   <ListBulletIcon className="h-5 w-5" />
                 </button>
               </div>
+
+              {/* Filters Toggle */}
+              <button
+                onClick={() => setShowFilters(!showFilters)}
+                className="flex items-center gap-2 px-4 py-2 border border-secondary-300 dark:border-dark-600 rounded-lg bg-white dark:bg-dark-800 text-secondary-900 dark:text-white hover:bg-secondary-50 dark:hover:bg-dark-700 transition-colors"
+              >
+                <FunnelIcon className="h-5 w-5" />
+                Filters
+              </button>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Advanced Filters */}
-          {showFilters && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="mt-6 p-6 bg-secondary-50 dark:bg-dark-700 rounded-xl"
-            >
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Price Range */}
-                <div>
-                  <label className="block text-sm font-medium text-secondary-900 dark:text-white mb-3">
-                    Price Range: ${priceRange[0]} - ${priceRange[1]}
-                  </label>
-                  <div className="flex items-center gap-4">
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={priceRange[0]}
-                      onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
-                      className="flex-1"
-                    />
-                    <input
-                      type="range"
-                      min="0"
-                      max="100"
-                      value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                      className="flex-1"
-                    />
-                  </div>
+      {/* Main Content */}
+      <div className="container-max section-padding">
+        <div className="flex gap-8">
+          {/* Sidebar Filters */}
+          <aside className={`w-80 flex-shrink-0 ${showFilters ? 'block' : 'hidden lg:block'}`}>
+            <div className="sticky top-40 space-y-8">
+              {/* Categories Filter */}
+              <div>
+                <h3 className="text-lg font-semibold text-secondary-900 dark:text-white mb-4">Categories</h3>
+                <div className="space-y-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => setSelectedCategory(category)}
+                      className={`block w-full text-left px-3 py-2 rounded-lg transition-colors ${
+                        selectedCategory === category
+                          ? 'bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300'
+                          : 'text-secondary-600 dark:text-secondary-400 hover:bg-secondary-50 dark:hover:bg-dark-800'
+                      }`}
+                    >
+                      {category}
+                    </button>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          )}
-        </div>
 
-        {/* Results Count */}
-        <div className="flex items-center justify-between mb-6">
-          <p className="text-secondary-600 dark:text-secondary-400">
-            Showing {filteredAndSortedProducts.length} of {allProducts.length} products
-          </p>
-        </div>
+              {/* Price Filter */}
+              <div>
+                <h3 className="text-lg font-semibold text-secondary-900 dark:text-white mb-4">Price Range</h3>
+                <div className="space-y-2">
+                  {filters.priceRanges.map((range, index) => (
+                    <label key={index} className="flex items-center space-x-3 cursor-pointer">
+                      <input
+                        type="checkbox"
+                        className="rounded border-secondary-300 dark:border-dark-600 text-primary-500 focus:ring-primary-500"
+                      />
+                      <span className="text-secondary-600 dark:text-secondary-400">{range.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
 
-        {/* Products Grid */}
-        {filteredAndSortedProducts.length > 0 ? (
-          <motion.div
-            className={`grid gap-6 ${
-              viewMode === 'grid'
-                ? 'sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
-                : 'grid-cols-1 max-w-4xl mx-auto'
-            }`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            {filteredAndSortedProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <ProductCard 
-                  product={product} 
-                  className={viewMode === 'list' ? 'flex-row' : ''}
-                />
-              </motion.div>
-            ))}
-          </motion.div>
-        ) : (
-          <div className="text-center py-16">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
-              No products found
-            </h3>
-            <p className="text-secondary-600 dark:text-secondary-400 mb-6">
-              Try adjusting your search or filter criteria
-            </p>
-            <button
-              onClick={() => {
-                setSearchQuery('')
-                setSelectedCategory('All')
-                setPriceRange([0, 100])
-              }}
-              className="btn-primary"
+              {/* Color Filter */}
+              <div>
+                <h3 className="text-lg font-semibold text-secondary-900 dark:text-white mb-4">Colors</h3>
+                <div className="flex flex-wrap gap-2">
+                  {filters.colors.map((color, index) => (
+                    <button
+                      key={index}
+                      className="w-8 h-8 rounded-full border-2 border-secondary-300 dark:border-dark-600 hover:scale-110 transition-transform"
+                      style={{ backgroundColor: color.value }}
+                      title={color.name}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </aside>
+
+          {/* Main Content Area */}
+          <main className="flex-1">
+
+            {/* Products Grid/List */}
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              animate="visible"
+              className={`grid gap-6 ${
+                viewMode === 'grid'
+                  ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+                  : 'grid-cols-1'
+              }`}
             >
-              Clear Filters
-            </button>
-          </div>
-        )}
+              {filteredAndSortedProducts.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  variants={fadeInUp}
+                  className={`group bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ${
+                    viewMode === 'list' ? 'flex gap-6' : ''
+                  }`}
+                >
+                  <div className={`relative overflow-hidden ${viewMode === 'list' ? 'w-48 flex-shrink-0' : 'aspect-square'}`}>
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    {product.isNew && (
+                      <span className="absolute top-3 left-3 bg-primary-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                        New
+                      </span>
+                    )}
+                    {product.discount && (
+                      <span className="absolute top-3 right-3 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+                        -{product.discount}%
+                      </span>
+                    )}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button className="w-full bg-white/90 backdrop-blur-sm text-secondary-900 py-2 rounded-lg font-medium hover:bg-white transition-colors">
+                        Quick View
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <div className={`p-4 ${viewMode === 'list' ? 'flex-1' : ''}`}>
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-semibold text-secondary-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                        {product.name}
+                      </h3>
+                      <button className="text-secondary-400 hover:text-red-500 transition-colors">
+                        <HeartIcon className="h-5 w-5" />
+                      </button>
+                    </div>
+                    
+                    <p className="text-secondary-600 dark:text-secondary-400 text-sm mb-3">
+                      {product.category}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold text-secondary-900 dark:text-white">
+                          ${product.price}
+                        </span>
+                        {product.originalPrice && (
+                          <span className="text-sm text-secondary-500 line-through">
+                            ${product.originalPrice}
+                          </span>
+                        )}
+                      </div>
+                      
+                      <div className="flex items-center gap-1">
+                        <StarIcon className="h-4 w-4 text-yellow-400 fill-current" />
+                        <span className="text-sm text-secondary-600 dark:text-secondary-400">
+                          {product.rating}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {viewMode === 'list' && (
+                      <div className="mt-4">
+                        <p className="text-secondary-600 dark:text-secondary-400 text-sm mb-4">
+                          {product.description || 'Stylish and comfortable outfit perfect for any occasion.'}
+                        </p>
+                        <button className="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors">
+                          Add to Cart
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
 
-        {/* Load More Button (for pagination) */}
-        {filteredAndSortedProducts.length > 0 && filteredAndSortedProducts.length >= 8 && (
-          <div className="text-center mt-12">
-            <button className="btn-secondary">
-              Load More Products
-            </button>
-          </div>
-        )}
+            {/* No Results */}
+            {filteredAndSortedProducts.length === 0 && (
+              <div className="text-center py-12">
+                <div className="text-secondary-400 mb-4">
+                  <SparklesIcon className="h-16 w-16 mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold text-secondary-900 dark:text-white mb-2">
+                  No products found
+                </h3>
+                <p className="text-secondary-600 dark:text-secondary-400">
+                  Try adjusting your search or filter criteria
+                </p>
+              </div>
+            )}
+          </main>
+        </div>
       </div>
     </div>
   )

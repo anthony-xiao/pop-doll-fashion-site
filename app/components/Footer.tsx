@@ -13,29 +13,20 @@ const footerLinks = {
   shop: [
     { name: 'New Arrivals', href: '/new-arrivals' },
     { name: 'Collections', href: '/collections' },
-    { name: 'Accessories', href: '/accessories' },
-    { name: 'Sale', href: '/sale' },
-    { name: 'Gift Cards', href: '/gift-cards' },
   ],
   support: [
     { name: 'Size Guide', href: '/size-guide' },
     { name: 'Care Instructions', href: '/care' },
     { name: 'Shipping Info', href: '/shipping' },
-    { name: 'Returns', href: '/returns' },
-    { name: 'FAQ', href: '/faq' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Our Story', href: '/story' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Press', href: '/press' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Accessibility', href: '/accessibility' },
   ],
 }
 

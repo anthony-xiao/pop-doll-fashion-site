@@ -134,7 +134,7 @@ export default function CartPage() {
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-screen bg-white dark:bg-dark-900">
+      <div className="min-h-screen bg-white dark:bg-dark-900 header-offset">
         <motion.section 
           className="py-20"
           initial="initial"
@@ -164,7 +164,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900">
+    <div className="min-h-screen bg-white dark:bg-dark-900 header-offset">
       {/* Header */}
       <motion.section 
         className="py-12 bg-secondary-50 dark:bg-dark-800"

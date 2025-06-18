@@ -155,7 +155,7 @@ export default function CheckoutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-secondary-50 dark:bg-dark-900">
+    <div className="min-h-screen bg-secondary-50 dark:bg-dark-900 header-offset">
       {/* Header */}
       <motion.section 
         className="py-8 bg-white dark:bg-dark-800 border-b border-secondary-200 dark:border-dark-700"

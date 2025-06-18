@@ -458,7 +458,7 @@ export default function AboutPage() {
                 href="/collections" 
                 className="bg-white text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-xl font-semibold transition-colors"
               >
-                Shop Collections
+                Shop Now
               </Link>
               <Link 
                 href="/signup" 

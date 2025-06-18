@@ -116,8 +116,8 @@ const features = [
   },
   {
     icon: GiftIcon,
-    title: 'Gift Wrapping',
-    description: 'Beautiful packaging included'
+    title: 'Carbon Neutral Shipping',
+    description: 'Eco-friendly delivery with offset emissions'
   }
 ]
 
@@ -179,12 +179,12 @@ export default function HomePage() {
               </motion.div>
 
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4">
-                <Link href="/collections" className="btn-primary btn-lg group">
-                  Shop Collections
+                <Link href="/collections" className="btn-primary btn-lg group inline-flex items-center gap-2">
+                  Shop Now
                   <ArrowRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="/about" className="btn-secondary btn-lg">
-                  Learn More
+                  Discover More
                 </Link>
               </motion.div>
 

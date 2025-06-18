@@ -100,6 +100,53 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
+/* Navigation spacing utilities */
+.nav-offset {
+  padding-top: 3.5rem; /* 56px - matches h-14 */
+}
+
+@media (min-width: 1024px) {
+  .nav-offset {
+    padding-top: 4rem; /* 64px - matches lg:h-16 */
+  }
+}
+
+/* For pages with hero sections that should start from top */
+.hero-full {
+  margin-top: -3.5rem;
+  padding-top: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-full {
+    margin-top: -4rem;
+    padding-top: 4rem;
+  }
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem; /* Offset for fixed header */
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
+
+/* Prevent layout shift during navigation transitions */
+* {
+  scroll-margin-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+  * {
+    scroll-margin-top: 5rem;
+  }
+}
+
 .dark body {
   color: var(--color-secondary-100);
   background-color: var(--color-dark-900);
@@ -124,6 +171,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Layout Components */
+:root {
+  --header-height: 4rem; /* 64px for mobile */
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --header-height: 5rem; /* 80px for desktop */
+  }
+}
+
 .container-max {
   max-width: 1280px;
   margin: 0 auto;
@@ -143,6 +200,16 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+/* Header offset utility */
+.header-offset {
+  padding-top: var(--header-height);
+}
+
+/* Smooth scroll with header offset */
+html {
+  scroll-padding-top: var(--header-height);
 }
 
 .section-padding {
@@ -174,11 +241,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-md {
-  @apply px-4 py-2 text-base rounded-lg;
+  @apply px-4 py-2 text-base rounded-lg whitespace-nowrap;
 }
 
 .btn-lg {
-  @apply px-6 py-3 text-lg rounded-xl;
+  @apply px-6 py-3 text-lg rounded-xl whitespace-nowrap;
 }
 
 .btn-primary {
@@ -705,7 +772,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .btn-lg {
-    @apply px-4 py-2.5 text-base;
+    @apply px-6 py-3 text-base whitespace-nowrap;
   }
 }
 

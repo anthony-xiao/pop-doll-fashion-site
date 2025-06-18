@@ -178,7 +178,7 @@ export default function ProductDetailPage() {
   }
   
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900 py-8">
+    <div className="min-h-screen bg-white dark:bg-dark-900 header-offset pb-8">
       <div className="container-max">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-secondary-600 dark:text-secondary-400 mb-8">

@@ -144,7 +144,7 @@ const troubleshooting = [
 
 export default function CareInstructionsPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-dark-900">
+    <div className="min-h-screen bg-white dark:bg-dark-900 header-offset py-8">
       {/* Hero Section */}
       <motion.section 
         className="relative py-20 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-dark-800 dark:to-dark-700"

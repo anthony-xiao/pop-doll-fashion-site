@@ -9,7 +9,8 @@ import {
   Squares2X2Icon,
   ListBulletIcon,
   MagnifyingGlassIcon,
-  AdjustmentsHorizontalIcon
+  AdjustmentsHorizontalIcon,
+  ArrowRightIcon
 } from '@heroicons/react/24/outline'
 import ProductCard from '../components/ProductCard'
 
@@ -221,10 +222,20 @@ export default function CollectionsPage() {
             <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
               <span className="gradient-text">Collections</span>
             </h1>
-            <p className="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed max-w-3xl mx-auto mb-8">
               Discover our curated collections of premium fashion for your Labubu dolls. 
               From street style to luxury pieces, find the perfect outfit for every occasion.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-medium rounded-lg transition-colors duration-200"
+              >
+                View All Products
+                <ArrowRightIcon className="h-5 w-5" />
+              </Link>
+              <span className="text-secondary-500 dark:text-secondary-400">or browse by collection below</span>
+            </div>
           </motion.div>
         </div>
       </section>
