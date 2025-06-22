@@ -33,51 +33,58 @@ const scaleIn: Variants = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
-// Labubu collections data
+// Labubu collections data - organized by actual product categories
 const collections = [
   {
     id: 'fantasy',
     name: 'Fantasy Collection',
     description: 'Magical outfits for enchanted adventures and mystical journeys',
     image: '/images/products/白森林-White-Forest/Labubu Front View.png',
-    productCount: 5,
-    featured: true
+    productCount: 3,
+    featured: true,
+    gradient: 'from-purple-500 to-pink-500'
   },
   {
     id: 'designer',
     name: 'Designer Collection',
-    description: 'Premium luxury fashion pieces crafted with exquisite attention to detail',
+    description: 'Premium luxury fashion pieces from top brands',
     image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
-    productCount: 4,
-    featured: true
+    productCount: 5,
+    featured: true,
+    gradient: 'from-amber-500 to-orange-500'
   },
   {
     id: 'costume',
     name: 'Costume Collection',
     description: 'Fun character and themed costumes for special occasions',
     image: '/images/products/大天使-Archangel/Character Front View.png',
-    productCount: 3,
-    featured: true
+    productCount: 5,
+    featured: true,
+    gradient: 'from-blue-500 to-cyan-500'
   },
   {
     id: 'formal',
     name: 'Formal Collection',
     description: 'Elegant formal wear for sophisticated occasions',
-    image: '/images/products/女仆装-Maid-Outfit/Character Front View.png',
-    productCount: 3,
-    featured: false
+    image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
+    productCount: 2,
+    featured: true,
+    gradient: 'from-gray-700 to-gray-900'
   },
   {
     id: 'casual',
     name: 'Casual Collection',
     description: 'Comfortable everyday outfits for relaxed styling',
-    image: '/images/products/棕色甜甜圈休闲套装-Brown-Donut-Casual-Set/Character Front View.png',
-    productCount: 2,
-    featured: false
+    image: '/images/products/棕色甜甜圈-Brown-Donut/Character Front View.png',
+    productCount: 3,
+    featured: true,
+    gradient: 'from-green-500 to-teal-500'
   }
 ]
 
-const featuredProducts = [
+// Complete product catalog organized by collections
+const allProducts = [
+  // Fantasy Collection
   {
     id: 1,
     name: 'White Forest Fantasy Set',
@@ -88,7 +95,8 @@ const featuredProducts = [
     reviews: 234,
     badge: 'Best Seller',
     colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA'],
-    collection: 'fantasy'
+    collection: 'fantasy',
+    category: 'Fantasy'
   },
   {
     id: 2,
@@ -100,8 +108,23 @@ const featuredProducts = [
     reviews: 189,
     badge: 'Limited Edition',
     colors: ['#FFD700', '#FFFFFF', '#87CEEB'],
-    collection: 'costume'
+    collection: 'fantasy',
+    category: 'Fantasy'
   },
+  {
+    id: 5,
+    name: 'Little Swan Ballet Set',
+    price: 39.99,
+    originalPrice: 49.99,
+    image: '/images/products/小天鹅-Little-Swan/Character Front View.png',
+    rating: 4.9,
+    reviews: 178,
+    badge: 'New',
+    colors: ['#FFFFFF', '#FFB6C1', '#E6E6FA'],
+    collection: 'fantasy',
+    category: 'Fantasy'
+  },
+  // Designer Collection
   {
     id: 10,
     name: 'Gold V White Luxury Suit',
@@ -112,7 +135,74 @@ const featuredProducts = [
     reviews: 267,
     badge: 'Luxury',
     colors: ['#FFFFFF', '#FFD700', '#F5F5DC'],
-    collection: 'designer'
+    collection: 'designer',
+    category: 'Designer'
+  },
+  {
+    id: 14,
+    name: 'C Brand Red Plaid Set',
+    price: 44.99,
+    originalPrice: 56.99,
+    image: '/images/products/C家红格子-C-Brand-Red-Plaid/Character Front View.png',
+    rating: 4.7,
+    reviews: 143,
+    badge: 'Designer',
+    colors: ['#FF0000', '#FFFFFF', '#000000'],
+    collection: 'designer',
+    category: 'Designer'
+  },
+  {
+    id: 15,
+    name: 'C Brand Black Dress',
+    price: 49.99,
+    originalPrice: 64.99,
+    image: '/images/products/C家黑色连衣裙-C-Brand-Black-Dress/Character Front View.png',
+    rating: 4.9,
+    reviews: 221,
+    badge: 'Elegant',
+    colors: ['#000000', '#2F2F2F', '#4A4A4A'],
+    collection: 'designer',
+    category: 'Designer'
+  },
+  {
+    id: 16,
+    name: 'D Brand Blue Dress',
+    price: 34.99,
+    originalPrice: 44.99,
+    image: '/images/products/D家蓝色连衣裙-D-Brand-Blue-Dress/Character Front View.png',
+    rating: 4.7,
+    reviews: 134,
+    badge: 'Designer',
+    colors: ['#0000FF', '#4169E1', '#87CEEB'],
+    collection: 'designer',
+    category: 'Designer'
+  },
+  {
+    id: 17,
+    name: 'G Brand Coffee Dress',
+    price: 33.99,
+    originalPrice: 43.99,
+    image: '/images/products/G家咖色连衣裙-G-Brand-Coffee-Dress/Character Front View.png',
+    rating: 4.6,
+    reviews: 98,
+    badge: 'Designer',
+    colors: ['#8B4513', '#A0522D', '#D2691E'],
+    collection: 'designer',
+    category: 'Designer'
+  },
+  // Costume Collection
+  {
+    id: 3,
+    name: 'Rabbit Officer Uniform',
+    price: 38.99,
+    originalPrice: 48.99,
+    image: '/images/products/兔子警官-Rabbit-Officer/Character Front View.png',
+    rating: 4.7,
+    reviews: 156,
+    badge: 'Popular',
+    colors: ['#000080', '#C0C0C0', '#FFD700'],
+    collection: 'costume',
+    category: 'Costume'
   },
   {
     id: 4,
@@ -124,33 +214,108 @@ const featuredProducts = [
     reviews: 203,
     badge: 'Trending',
     colors: ['#000000', '#FFFFFF', '#FF69B4'],
-    collection: 'formal'
+    collection: 'costume',
+    category: 'Costume'
   },
   {
-    id: 15,
-    name: 'Brown Donut Casual Set',
-    price: 38.99,
-    originalPrice: 48.99,
-    image: '/images/products/棕色甜甜圈休闲套装-Brown-Donut-Casual-Set/Character Front View.png',
+    id: 7,
+    name: 'White Happy Mouse Costume',
+    price: 34.99,
+    originalPrice: 44.99,
+    image: '/images/products/白色开心鼠-White-Happy-Mouse/Character Front View.png',
     rating: 4.7,
-    reviews: 156,
-    badge: 'Cozy',
-    colors: ['#8B4513', '#D2691E', '#F4A460'],
-    collection: 'casual'
+    reviews: 167,
+    badge: 'Cute',
+    colors: ['#FFFFFF', '#FFB6C1', '#87CEEB'],
+    collection: 'costume',
+    category: 'Costume'
   },
   {
-    id: 3,
-    name: 'Rabbit Officer Uniform',
-    price: 48.99,
-    originalPrice: 62.99,
-    image: '/images/products/兔子警官制服-Rabbit-Officer-Uniform/Character Front View.png',
+    id: 9,
+    name: 'Blue Big Mouth Fish Costume',
+    price: 33.99,
+    originalPrice: 43.99,
+    image: '/images/products/蓝色大嘴鱼-Blue-Big-Mouth-Fish/Character Front View.png',
+    rating: 4.6,
+    reviews: 134,
+    badge: 'Ocean',
+    colors: ['#0000FF', '#87CEEB', '#4169E1'],
+    collection: 'costume',
+    category: 'Costume'
+  },
+  {
+    id: 11,
+    name: 'Mario Adventure Costume',
+    price: 41.99,
+    originalPrice: 51.99,
+    image: '/images/products/马里奥-Mario/Character Front View.png',
     rating: 4.8,
-    reviews: 178,
-    badge: 'Professional',
-    colors: ['#000080', '#FFFFFF', '#FFD700'],
-    collection: 'costume'
+    reviews: 198,
+    badge: 'Gaming',
+    colors: ['#FF0000', '#0000FF', '#FFFF00'],
+    collection: 'costume',
+    category: 'Costume'
+  },
+  // Formal Collection
+  {
+    id: 12,
+    name: 'Black Plaid Formal Suit',
+    price: 42.99,
+    originalPrice: 52.99,
+    image: '/images/products/黑格套装-Black-Plaid-Suit/Character Front View.png',
+    rating: 4.9,
+    reviews: 92,
+    badge: 'Premium',
+    colors: ['#000000', '#808080', '#FFFFFF'],
+    collection: 'formal',
+    category: 'Formal'
+  },
+  // Casual Collection
+  {
+    id: 6,
+    name: 'Brown Donut Casual Set',
+    price: 29.99,
+    originalPrice: 39.99,
+    image: '/images/products/棕色甜甜圈-Brown-Donut/Character Front View.png',
+    rating: 4.6,
+    reviews: 145,
+    badge: 'Sweet',
+    colors: ['#8B4513', '#DEB887', '#F4A460'],
+    collection: 'casual',
+    category: 'Casual'
+  },
+  {
+    id: 8,
+    name: 'Pink Little Colorful Set',
+    price: 36.99,
+    originalPrice: 46.99,
+    image: '/images/products/粉色小炫彩-Pink-Little-Colorful/Character Front View.png',
+    rating: 4.8,
+    reviews: 192,
+    badge: 'Vibrant',
+    colors: ['#FF69B4', '#FFB6C1', '#FF1493'],
+    collection: 'casual',
+    category: 'Casual'
+  },
+  {
+    id: 13,
+    name: 'Black Little Colorful Set',
+    price: 37.99,
+    originalPrice: 47.99,
+    image: '/images/products/黑色小炫彩-Black-Little-Colorful/Character Front View.png',
+    rating: 4.8,
+    reviews: 174,
+    badge: 'Chic',
+    colors: ['#000000', '#FF69B4', '#32CD32'],
+    collection: 'casual',
+    category: 'Casual'
   }
 ]
+
+const featuredProducts = allProducts.filter(product => 
+  ['Best Seller', 'Limited Edition', 'New', 'Luxury'].includes(product.badge || '')
+).slice(0, 8)
+
 
 const filters = {
   priceRanges: [
@@ -177,7 +342,7 @@ export default function CollectionsPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [sortBy, setSortBy] = useState('featured')
 
-  const filteredProducts = featuredProducts.filter(product => {
+  const filteredProducts = allProducts.filter(product => {
     if (selectedCollection && product.collection !== selectedCollection) return false
     if (searchQuery && !product.name.toLowerCase().includes(searchQuery.toLowerCase())) return false
     return true
@@ -382,21 +547,41 @@ export default function CollectionsPage() {
                     <motion.div
                       key={collection.id}
                       variants={scaleIn}
-                      className="group relative overflow-hidden rounded-2xl aspect-[4/5] cursor-pointer"
-                      onClick={() => setSelectedCollection(collection.id)}
+                      className={`group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 ${
+                        selectedCollection === collection.id
+                          ? 'ring-4 ring-primary-500 shadow-2xl scale-105'
+                          : 'hover:shadow-xl hover:scale-102'
+                      }`}
+                      onClick={() => setSelectedCollection(
+                        selectedCollection === collection.id ? null : collection.id
+                      )}
                     >
-                      <Image
-                        src={collection.image}
-                        alt={collection.name}
-                        width={400}
-                        height={500}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-bold text-white mb-2">{collection.name}</h3>
-                        <p className="text-white/90 mb-2">{collection.description}</p>
-                        <p className="text-white/80 text-sm">{collection.productCount} items</p>
+                      <div className="aspect-[4/3] relative">
+                        <Image
+                          src={collection.image}
+                          alt={collection.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className={`absolute inset-0 bg-gradient-to-t ${collection.gradient} opacity-80`} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                        
+                        <div className="absolute bottom-6 left-6 right-6">
+                          <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                            {collection.name}
+                          </h3>
+                          <p className="text-white/90 text-sm mb-3 drop-shadow">
+                            {collection.description}
+                          </p>
+                          <div className="flex items-center justify-between">
+                            <span className="text-white/80 text-sm font-medium bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                              {collection.productCount} products
+                            </span>
+                            <div className="bg-white/20 backdrop-blur-sm p-2 rounded-full group-hover:bg-white/30 transition-colors">
+                              <ArrowRightIcon className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </motion.div>
                   ))}
@@ -429,7 +614,7 @@ export default function CollectionsPage() {
               </div>
 
               {viewMode === 'grid' ? (
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {sortedProducts.map((product) => (
                     <ProductCard key={product.id} product={product} />
                   ))}

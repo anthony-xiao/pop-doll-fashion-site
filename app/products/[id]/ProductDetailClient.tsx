@@ -50,7 +50,7 @@ const getProductById = (id: string) => {
         "Material": "Cotton blend (80% cotton, 20% polyester)",
         "Care Instructions": "Machine wash cold, air dry",
         "Includes": "Dress, hair bow, tiny shoes",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designed in Japan"
       }
     },
@@ -81,7 +81,7 @@ const getProductById = (id: string) => {
         "Material": "Velvet and lace blend",
         "Care Instructions": "Hand wash only",
         "Includes": "Dress, corset, mini hat, stockings",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designed in France"
       }
     }

@@ -52,7 +52,7 @@ const getProductById = (id: string) => {
         "Material": "Premium cotton blend with fantasy elements",
         "Care Instructions": "Hand wash cold, air dry",
         "Includes": "Fantasy outfit, mystical accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designed with love"
       }
     },
@@ -85,7 +85,7 @@ const getProductById = (id: string) => {
         "Material": "Celestial fabric blend",
         "Care Instructions": "Gentle hand wash only",
         "Includes": "Divine costume, wings, halo, accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Heavenly inspired design"
       }
     },
@@ -118,7 +118,7 @@ const getProductById = (id: string) => {
         "Material": "Professional uniform fabric",
         "Care Instructions": "Machine wash cold",
         "Includes": "Uniform, badge, hat, accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Professional design"
       }
     },
@@ -151,7 +151,7 @@ const getProductById = (id: string) => {
         "Material": "Cotton blend with lace trim",
         "Care Instructions": "Hand wash recommended",
         "Includes": "Dress, apron, headpiece",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Classic inspired"
       }
     },
@@ -184,7 +184,7 @@ const getProductById = (id: string) => {
         "Material": "Tulle and satin blend",
         "Care Instructions": "Gentle hand wash",
         "Includes": "Ballet costume, tutu, accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Ballet inspired"
       }
     },
@@ -217,7 +217,7 @@ const getProductById = (id: string) => {
         "Material": "Soft cotton blend",
         "Care Instructions": "Machine wash cold",
         "Includes": "Casual outfit, donut accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Sweet inspired"
       }
     },
@@ -250,7 +250,7 @@ const getProductById = (id: string) => {
         "Material": "Plush and cotton blend",
         "Care Instructions": "Hand wash recommended",
         "Includes": "Mouse costume, ears, tail",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Cute inspired"
       }
     },
@@ -283,7 +283,7 @@ const getProductById = (id: string) => {
         "Material": "Colorful fabric blend",
         "Care Instructions": "Machine wash cold",
         "Includes": "Pink outfit, headband, clutch",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Colorful inspired"
       }
     },
@@ -316,7 +316,7 @@ const getProductById = (id: string) => {
         "Material": "Water-resistant fabric",
         "Care Instructions": "Hand wash cold",
         "Includes": "Fish costume, ocean accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Ocean inspired"
       }
     },
@@ -349,7 +349,7 @@ const getProductById = (id: string) => {
         "Material": "Premium luxury fabric",
         "Care Instructions": "Dry clean recommended",
         "Includes": "Luxury suit, gold accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Luxury inspired"
       }
     },
@@ -382,7 +382,7 @@ const getProductById = (id: string) => {
         "Material": "Durable gaming fabric",
         "Care Instructions": "Machine wash cold",
         "Includes": "Adventure costume, gaming accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Gaming inspired"
       }
     },
@@ -415,7 +415,7 @@ const getProductById = (id: string) => {
         "Material": "Formal plaid fabric",
         "Care Instructions": "Dry clean preferred",
         "Includes": "Plaid suit, handbag, formal accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Formal inspired"
       }
     },
@@ -448,7 +448,7 @@ const getProductById = (id: string) => {
         "Material": "Black fabric with tweed accents",
         "Care Instructions": "Hand wash recommended",
         "Includes": "Black outfit, tweed accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Contemporary inspired"
       }
     },
@@ -481,7 +481,7 @@ const getProductById = (id: string) => {
         "Material": "Designer plaid fabric",
         "Care Instructions": "Professional care recommended",
         "Includes": "Designer plaid set, brand accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designer collection"
       }
     },
@@ -514,7 +514,7 @@ const getProductById = (id: string) => {
         "Material": "Designer dress fabric",
         "Care Instructions": "Professional care recommended",
         "Includes": "Black dress, bow tie, skirt accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designer collection"
       }
     },
@@ -547,7 +547,7 @@ const getProductById = (id: string) => {
         "Material": "Designer blue fabric",
         "Care Instructions": "Professional care recommended",
         "Includes": "Blue dress, handbag, bow accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Designer collection"
       }
     },
@@ -580,7 +580,7 @@ const getProductById = (id: string) => {
         "Material": "Premium coffee-colored fabric",
         "Care Instructions": "Professional care only",
         "Includes": "Coffee dress, designer accessories",
-        "Compatibility": "Labubu dolls (12cm)",
+        "Compatibility": "Labubu dolls (17cm)",
         "Origin": "Luxury designer collection"
       }
     }

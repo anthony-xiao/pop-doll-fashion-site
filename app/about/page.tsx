@@ -205,7 +205,7 @@ export default function AboutPage() {
                   <HeartIcon className="h-8 w-8 text-red-500" />
                   <div>
                     <p className="font-bold text-secondary-900 dark:text-white">Made with Love</p>
-                    <p className="text-sm text-secondary-600 dark:text-secondary-400">Since 2020</p>
+                    <p className="text-sm text-secondary-600 dark:text-secondary-400">Since 2024</p>
                   </div>
                 </div>
               </div>
