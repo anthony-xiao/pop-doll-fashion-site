@@ -34,72 +34,72 @@ const scaleIn: Variants = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
-// Mock data - replace with real data later
+// Featured Labubu products
 const featuredProducts = [
   {
     id: 1,
-    name: 'Designer Hoodie Set',
-    price: 29.99,
-    originalPrice: 39.99,
-    image: '/images/designer-hoodie-set-new.webp',
-    rating: 4.8,
-    reviews: 124,
+    name: 'White Forest Fantasy Set',
+    price: 45.99,
+    originalPrice: 59.99,
+    image: '/images/products/白森林-White-Forest/Labubu Front View.png',
+    rating: 4.9,
+    reviews: 234,
     badge: 'Best Seller',
-    colors: ['#000000', '#FF69B4', '#87CEEB']
+    colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA']
   },
   {
     id: 2,
-    name: 'Luxury Handbag Collection',
-    price: 24.99,
-    originalPrice: null,
-    image: '/images/luxury-handbag-collection-fresh.webp',
-    rating: 4.9,
-    reviews: 89,
-    badge: 'New',
-    colors: ['#8B4513', '#000000', '#FF1493']
+    name: 'Archangel Divine Costume',
+    price: 52.99,
+    originalPrice: 69.99,
+    image: '/images/products/大天使-Archangel/Character Front View.png',
+    rating: 4.8,
+    reviews: 189,
+    badge: 'Limited Edition',
+    colors: ['#FFD700', '#FFFFFF', '#87CEEB']
   },
   {
-    id: 3,
-    name: 'Streetwear Outfit',
-    price: 34.99,
-    originalPrice: 44.99,
-    image: '/images/trendy-streetwear.webp',
-    rating: 4.7,
-    reviews: 156,
-    badge: 'Limited',
-    colors: ['#000000', '#FFFFFF', '#FF4500']
+    id: 10,
+    name: 'Gold V White Luxury Suit',
+    price: 58.99,
+    originalPrice: 74.99,
+    image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
+    rating: 4.9,
+    reviews: 267,
+    badge: 'Luxury',
+    colors: ['#FFFFFF', '#FFD700', '#F5F5DC']
   },
   {
     id: 4,
-    name: 'Elegant Business Casual',
-    price: 39.99,
-    originalPrice: null,
-    image: '/images/business-casual-outfit.webp',
-    rating: 5.0,
-    reviews: 67,
-    badge: 'Premium',
-    colors: ['#FFB6C1', '#000000', '#GOLD']
+    name: 'Elegant Maid Outfit',
+    price: 42.99,
+    originalPrice: 54.99,
+    image: '/images/products/女仆装-Maid-Outfit/Character Front View.png',
+    rating: 4.8,
+    reviews: 203,
+    badge: 'Trending',
+    colors: ['#000000', '#FFFFFF', '#FF69B4']
   }
 ]
 
 const collections = [
   {
-    name: 'Street Style',
-    description: 'Urban fashion for your Labubu',
-    image: '/images/trendy-streetwear.webp',
-    href: '/collections/street-style'
+    name: 'Fantasy Collection',
+    description: 'Magical outfits for enchanted adventures',
+    image: '/images/products/白森林-White-Forest/Labubu Front View.png',
+    href: '/collections/fantasy'
   },
   {
-    name: 'Luxury Line',
-    description: 'Premium designer pieces',
-    image: '/images/luxury-handbag-collection-fresh.webp',
-    href: '/collections/luxury'
+    name: 'Designer Collection',
+    description: 'Premium luxury fashion pieces',
+    image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
+    href: '/collections/designer'
   },
   {
-    name: 'Business Casual',
-    description: 'Professional style collections',
-    image: '/images/business-casual-outfit.webp',
-    href: '/collections/business-casual'
+    name: 'Costume Collection',
+    description: 'Fun character and themed costumes',
+    image: '/images/products/大天使-Archangel/Character Front View.png',
+    href: '/collections/costume'
   }
 ]
 

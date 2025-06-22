@@ -33,54 +33,46 @@ const scaleIn: Variants = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
-// Mock data for collections
+// Labubu collections data
 const collections = [
   {
-    id: 'street-style',
-    name: 'Street Style',
-    description: 'Urban fashion for your Labubu with edgy designs and contemporary flair',
-    image: '/images/trendy-streetwear.webp',
-    productCount: 24,
+    id: 'fantasy',
+    name: 'Fantasy Collection',
+    description: 'Magical outfits for enchanted adventures and mystical journeys',
+    image: '/images/products/白森林-White-Forest/Labubu Front View.png',
+    productCount: 5,
     featured: true
   },
   {
-    id: 'luxury',
-    name: 'Luxury Line',
-    description: 'Premium designer pieces crafted with the finest materials',
-    image: '/images/luxury-handbag-collection-fresh.webp',
-    productCount: 18,
+    id: 'designer',
+    name: 'Designer Collection',
+    description: 'Premium luxury fashion pieces crafted with exquisite attention to detail',
+    image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
+    productCount: 4,
     featured: true
   },
   {
-    id: 'business-casual',
-    name: 'Business Casual',
-    description: 'Professional style collections for the sophisticated doll',
-    image: '/images/business-casual-outfit.webp',
-    productCount: 32,
+    id: 'costume',
+    name: 'Costume Collection',
+    description: 'Fun character and themed costumes for special occasions',
+    image: '/images/products/大天使-Archangel/Character Front View.png',
+    productCount: 3,
     featured: true
   },
   {
-    id: 'summer-collection',
-    name: 'Summer Vibes',
-    description: 'Light and breezy outfits perfect for warm weather',
-    image: '/images/casual-summer-outfit-fresh.webp',
-    productCount: 28,
+    id: 'formal',
+    name: 'Formal Collection',
+    description: 'Elegant formal wear for sophisticated occasions',
+    image: '/images/products/女仆装-Maid-Outfit/Character Front View.png',
+    productCount: 3,
     featured: false
   },
   {
-    id: 'evening-wear',
-    name: 'Evening Elegance',
-    description: 'Sophisticated evening wear for special occasions',
-    image: '/images/elegant-evening-dress-fresh.webp',
-    productCount: 15,
-    featured: false
-  },
-  {
-    id: 'accessories',
-    name: 'Accessories',
-    description: 'Complete your look with our curated accessory collection',
-    image: '/images/luxury-handbag-collection-new.webp',
-    productCount: 45,
+    id: 'casual',
+    name: 'Casual Collection',
+    description: 'Comfortable everyday outfits for relaxed styling',
+    image: '/images/products/棕色甜甜圈休闲套装-Brown-Donut-Casual-Set/Character Front View.png',
+    productCount: 2,
     featured: false
   }
 ]
@@ -88,75 +80,75 @@ const collections = [
 const featuredProducts = [
   {
     id: 1,
-    name: 'Designer Hoodie Set',
-    price: 29.99,
-    originalPrice: 39.99,
-    image: '/images/designer-hoodie-set-new.webp',
-    rating: 4.8,
-    reviews: 124,
+    name: 'White Forest Fantasy Set',
+    price: 45.99,
+    originalPrice: 59.99,
+    image: '/images/products/白森林-White-Forest/Labubu Front View.png',
+    rating: 4.9,
+    reviews: 234,
     badge: 'Best Seller',
-    colors: ['#000000', '#FF69B4', '#87CEEB'],
-    collection: 'street-style'
+    colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA'],
+    collection: 'fantasy'
   },
   {
     id: 2,
-    name: 'Luxury Handbag Collection',
-    price: 24.99,
-    originalPrice: null,
-    image: '/images/luxury-handbag-collection-fresh.webp',
-    rating: 4.9,
-    reviews: 89,
-    badge: 'New',
-    colors: ['#8B4513', '#000000', '#FF1493'],
-    collection: 'luxury'
+    name: 'Archangel Divine Costume',
+    price: 52.99,
+    originalPrice: 69.99,
+    image: '/images/products/大天使-Archangel/Character Front View.png',
+    rating: 4.8,
+    reviews: 189,
+    badge: 'Limited Edition',
+    colors: ['#FFD700', '#FFFFFF', '#87CEEB'],
+    collection: 'costume'
   },
   {
-    id: 3,
-    name: 'Streetwear Outfit',
-    price: 34.99,
-    originalPrice: 44.99,
-    image: '/images/trendy-streetwear.webp',
-    rating: 4.7,
-    reviews: 156,
-    badge: 'Limited',
-    colors: ['#000000', '#FFFFFF', '#FF4500'],
-    collection: 'street-style'
+    id: 10,
+    name: 'Gold V White Luxury Suit',
+    price: 58.99,
+    originalPrice: 74.99,
+    image: '/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png',
+    rating: 4.9,
+    reviews: 267,
+    badge: 'Luxury',
+    colors: ['#FFFFFF', '#FFD700', '#F5F5DC'],
+    collection: 'designer'
   },
   {
     id: 4,
-    name: 'Elegant Business Casual',
-    price: 39.99,
-    originalPrice: null,
-    image: '/images/business-casual-outfit.webp',
-    rating: 5.0,
-    reviews: 67,
-    badge: 'Premium',
-    colors: ['#FFB6C1', '#000000', '#GOLD'],
-    collection: 'business-casual'
+    name: 'Elegant Maid Outfit',
+    price: 42.99,
+    originalPrice: 54.99,
+    image: '/images/products/女仆装-Maid-Outfit/Character Front View.png',
+    rating: 4.8,
+    reviews: 203,
+    badge: 'Trending',
+    colors: ['#000000', '#FFFFFF', '#FF69B4'],
+    collection: 'formal'
   },
   {
-    id: 5,
-    name: 'Summer Casual Outfit',
-    price: 22.99,
-    originalPrice: 29.99,
-    image: '/images/casual-summer-outfit-fresh.webp',
-    rating: 4.6,
-    reviews: 98,
-    badge: 'Sale',
-    colors: ['#FFB6C1', '#87CEEB', '#98FB98'],
-    collection: 'summer-collection'
+    id: 15,
+    name: 'Brown Donut Casual Set',
+    price: 38.99,
+    originalPrice: 48.99,
+    image: '/images/products/棕色甜甜圈休闲套装-Brown-Donut-Casual-Set/Character Front View.png',
+    rating: 4.7,
+    reviews: 156,
+    badge: 'Cozy',
+    colors: ['#8B4513', '#D2691E', '#F4A460'],
+    collection: 'casual'
   },
   {
-    id: 6,
-    name: 'Evening Elegance Dress',
-    price: 49.99,
-    originalPrice: null,
-    image: '/images/elegant-evening-dress-fresh.webp',
-    rating: 4.9,
-    reviews: 45,
-    badge: 'Exclusive',
-    colors: ['#000000', '#8B0000', '#4B0082'],
-    collection: 'evening-wear'
+    id: 3,
+    name: 'Rabbit Officer Uniform',
+    price: 48.99,
+    originalPrice: 62.99,
+    image: '/images/products/兔子警官制服-Rabbit-Officer-Uniform/Character Front View.png',
+    rating: 4.8,
+    reviews: 178,
+    badge: 'Professional',
+    colors: ['#000080', '#FFFFFF', '#FFD700'],
+    collection: 'costume'
   }
 ]
 

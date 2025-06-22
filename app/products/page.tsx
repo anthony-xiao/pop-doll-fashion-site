@@ -25,7 +25,11 @@ const fadeInUp: Variants = {
 }
 
 const staggerContainer: Variants = {
-  animate: {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
     transition: {
       staggerChildren: 0.1
     }
@@ -37,108 +41,232 @@ const scaleIn: Variants = {
   animate: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } }
 }
 
-// Mock products data - in a real app, this would come from an API
+// Labubu Doll Clothes Collection
 const allProducts = [
   {
     id: 1,
-    name: "Kawaii Pink Dress Set",
-    price: 24.99,
-    originalPrice: 34.99,
-    image: "/images/products/kawaii-pink-dress-1.jpg",
-    rating: 4.8,
-    reviews: 127,
+    name: "White Forest Fantasy Set",
+    price: 45.99,
+    originalPrice: 59.99,
+    image: "/images/products/白森林-White-Forest/Labubu Front View.png",
+    rating: 4.9,
+    reviews: 234,
     badge: "Best Seller",
-    colors: ['#FFB6C1', '#FF69B4', '#FFC0CB'],
-    category: "Dresses",
-    tags: ["kawaii", "pink", "dress", "cute"]
+    colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA'],
+    category: "Fantasy",
+    tags: ["white", "forest", "fantasy", "elegant"]
   },
   {
     id: 2,
-    name: "Gothic Lolita Outfit",
-    price: 32.99,
-    originalPrice: 42.99,
-    image: "/images/products/gothic-lolita-1.jpg",
-    rating: 4.9,
-    reviews: 89,
+    name: "Archangel Divine Costume",
+    price: 52.99,
+    originalPrice: 69.99,
+    image: "/images/products/大天使-Archangel/Character Front View.png",
+    rating: 4.8,
+    reviews: 189,
     badge: "Limited Edition",
-    colors: ['#2F1B69', '#000000', '#4B0082'],
-    category: "Outfits",
-    tags: ["gothic", "lolita", "elegant", "limited"]
+    colors: ['#FFD700', '#FFFFFF', '#87CEEB'],
+    category: "Fantasy",
+    tags: ["archangel", "divine", "celestial", "wings"]
   },
   {
     id: 3,
-    name: "Fairy Tale Princess Gown",
-    price: 28.99,
-    originalPrice: 38.99,
-    image: "/images/products/fairy-princess.jpg",
+    name: "Rabbit Officer Uniform",
+    price: 38.99,
+    originalPrice: 48.99,
+    image: "/images/products/兔子警官-Rabbit-Officer/Character Front View.png",
     rating: 4.7,
     reviews: 156,
-    colors: ['#87CEEB', '#FFB6C1', '#DDA0DD'],
-    category: "Dresses",
-    tags: ["fairy", "princess", "gown", "magical"]
+    badge: "Popular",
+    colors: ['#000080', '#C0C0C0', '#FFD700'],
+    category: "Costume",
+    tags: ["rabbit", "officer", "uniform", "professional"]
   },
   {
     id: 4,
-    name: "Casual Street Style Set",
-    price: 19.99,
-    image: "/images/products/street-style.jpg",
-    rating: 4.6,
+    name: "Elegant Maid Outfit",
+    price: 42.99,
+    originalPrice: 54.99,
+    image: "/images/products/女仆装-Maid-Outfit/Character Front View.png",
+    rating: 4.8,
     reviews: 203,
-    colors: ['#FF6347', '#32CD32', '#1E90FF'],
-    category: "Casual",
-    tags: ["street", "casual", "modern", "trendy"]
+    badge: "Trending",
+    colors: ['#000000', '#FFFFFF', '#FF69B4'],
+    category: "Costume",
+    tags: ["maid", "elegant", "classic", "traditional"]
   },
   {
     id: 5,
-    name: "Vintage Tea Party Dress",
-    price: 26.99,
-    originalPrice: 35.99,
-    image: "/images/products/vintage-tea-party.jpg",
-    rating: 4.5,
-    reviews: 92,
-    colors: ['#F5DEB3', '#DDA0DD', '#98FB98'],
-    category: "Dresses",
-    tags: ["vintage", "tea party", "elegant", "classic"]
+    name: "Little Swan Ballet Set",
+    price: 39.99,
+    originalPrice: 49.99,
+    image: "/images/products/小天鹅-Little-Swan/Character Front View.png",
+    rating: 4.9,
+    reviews: 178,
+    badge: "New",
+    colors: ['#FFFFFF', '#FFB6C1', '#E6E6FA'],
+    category: "Fantasy",
+    tags: ["swan", "ballet", "graceful", "dance"]
   },
   {
     id: 6,
-    name: "Sporty Chic Ensemble",
-    price: 22.99,
-    image: "/images/products/sporty-chic.jpg",
-    rating: 4.4,
-    reviews: 178,
-    badge: "New Arrival",
-    colors: ['#FF1493', '#00CED1', '#FFD700'],
-    category: "Sporty",
-    tags: ["sporty", "chic", "athletic", "new"]
+    name: "Brown Donut Casual Set",
+    price: 29.99,
+    originalPrice: 39.99,
+    image: "/images/products/棕色甜甜圈-Brown-Donut/Character Front View.png",
+    rating: 4.6,
+    reviews: 145,
+    badge: "Sweet",
+    colors: ['#8B4513', '#DEB887', '#F4A460'],
+    category: "Casual",
+    tags: ["donut", "sweet", "casual", "playful"]
   },
   {
     id: 7,
-    name: "Bohemian Summer Set",
-    price: 29.99,
-    image: "/images/products/bohemian-summer.jpg",
-    rating: 4.6,
-    reviews: 134,
-    colors: ['#DEB887', '#F0E68C', '#CD853F'],
-    category: "Bohemian",
-    tags: ["bohemian", "summer", "flowy", "natural"]
+    name: "White Happy Mouse Costume",
+    price: 34.99,
+    originalPrice: 44.99,
+    image: "/images/products/白色开心鼠-White-Happy-Mouse/Character Front View.png",
+    rating: 4.7,
+    reviews: 167,
+    badge: "Cute",
+    colors: ['#FFFFFF', '#FFB6C1', '#87CEEB'],
+    category: "Costume",
+    tags: ["mouse", "white", "happy", "cute"]
   },
   {
     id: 8,
-    name: "Elegant Evening Gown",
-    price: 39.99,
-    originalPrice: 49.99,
-    image: "/images/products/evening-gown.jpg",
+    name: "Pink Little Colorful Set",
+    price: 36.99,
+    originalPrice: 46.99,
+    image: "/images/products/粉色小炫彩-Pink-Little-Colorful/Character Front View.png",
     rating: 4.8,
-    reviews: 67,
+    reviews: 192,
+    badge: "Vibrant",
+    colors: ['#FF69B4', '#FFB6C1', '#FF1493'],
+    category: "Casual",
+    tags: ["pink", "colorful", "vibrant", "trendy"]
+  },
+  {
+    id: 9,
+    name: "Blue Big Mouth Fish Costume",
+    price: 33.99,
+    originalPrice: 43.99,
+    image: "/images/products/蓝色大嘴鱼-Blue-Big-Mouth-Fish/Character Front View.png",
+    rating: 4.6,
+    reviews: 134,
+    badge: "Ocean",
+    colors: ['#0000FF', '#87CEEB', '#4169E1'],
+    category: "Costume",
+    tags: ["fish", "ocean", "blue", "playful"]
+  },
+  {
+    id: 10,
+    name: "Gold V White Luxury Suit",
+    price: 58.99,
+    originalPrice: 74.99,
+    image: "/images/products/金V白色套装-Gold-V-White-Suit/Character Front View.png",
+    rating: 4.9,
+    reviews: 267,
+    badge: "Luxury",
+    colors: ['#FFFFFF', '#FFD700', '#F5F5DC'],
+    category: "Formal",
+    tags: ["luxury", "gold", "white", "elegant"]
+  },
+  {
+    id: 11,
+    name: "Mario Adventure Costume",
+    price: 41.99,
+    originalPrice: 51.99,
+    image: "/images/products/马里奥-Mario/Character Front View.png",
+    rating: 4.8,
+    reviews: 198,
+    badge: "Gaming",
+    colors: ['#FF0000', '#0000FF', '#FFFF00'],
+    category: "Costume",
+    tags: ["mario", "gaming", "adventure", "classic"]
+  },
+  {
+    id: 12,
+    name: "Black Plaid Formal Suit",
+    price: 42.99,
+    originalPrice: 52.99,
+    image: "/images/products/黑格套装-Black-Plaid-Suit/Character Front View.png",
+    rating: 4.9,
+    reviews: 92,
     badge: "Premium",
-    colors: ['#000000', '#8B0000', '#4B0082'],
-    category: "Evening",
-    tags: ["elegant", "evening", "formal", "premium"]
+    colors: ['#000000', '#808080', '#FFFFFF'],
+    category: "Formal",
+    tags: ["formal", "plaid", "professional", "elegant"]
+  },
+  {
+    id: 13,
+    name: "Black Little Colorful Set",
+    price: 37.99,
+    originalPrice: 47.99,
+    image: "/images/products/黑色小炫彩-Black-Little-Colorful/Character Front View.png",
+    rating: 4.8,
+    reviews: 174,
+    badge: "Chic",
+    colors: ['#000000', '#FF69B4', '#32CD32'],
+    category: "Casual",
+    tags: ["chic", "colorful", "modern", "trendy"]
+  },
+  {
+    id: 14,
+    name: "C Brand Red Plaid Set",
+    price: 44.99,
+    originalPrice: 56.99,
+    image: "/images/products/C家红格子-C-Brand-Red-Plaid/Character Front View.png",
+    rating: 4.7,
+    reviews: 143,
+    badge: "Designer",
+    colors: ['#FF0000', '#FFFFFF', '#000000'],
+    category: "Designer",
+    tags: ["designer", "plaid", "red", "premium"]
+  },
+  {
+    id: 15,
+    name: "C Brand Black Dress",
+    price: 49.99,
+    originalPrice: 64.99,
+    image: "/images/products/C家黑色连衣裙-C-Brand-Black-Dress/Character Front View.png",
+    rating: 4.9,
+    reviews: 221,
+    badge: "Elegant",
+    colors: ['#000000', '#2F2F2F', '#4A4A4A'],
+    category: "Designer",
+    tags: ["designer", "black", "dress", "elegant"]
+  },
+  {
+    id: 16,
+    name: "D Brand Blue Dress",
+    price: 34.99,
+    originalPrice: 44.99,
+    image: "/images/products/D家蓝色连衣裙-D-Brand-Blue-Dress/Character Front View.png",
+    rating: 4.7,
+    reviews: 134,
+    badge: "Designer",
+    colors: ['#0000FF', '#4169E1', '#87CEEB'],
+    category: "Designer",
+    tags: ["designer", "blue", "dress", "elegant"]
+  },
+  {
+    id: 17,
+    name: "G Brand Coffee Dress",
+    price: 33.99,
+    originalPrice: 43.99,
+    image: "/images/products/G家咖色连衣裙-G-Brand-Coffee-Dress/Character Front View.png",
+    rating: 4.6,
+    reviews: 98,
+    badge: "Designer",
+    colors: ['#8B4513', '#A0522D', '#D2691E'],
+    category: "Designer",
+    tags: ["designer", "coffee", "dress", "sophisticated"]
   }
 ]
 
-const categories = ["All", "Dresses", "Outfits", "Casual", "Sporty", "Bohemian", "Evening"]
+const categories = ["All", "Fantasy", "Formal", "Casual", "Costume", "Designer"]
 const sortOptions = [
   { value: "featured", label: "Featured" },
   { value: "price-low", label: "Price: Low to High" },
@@ -225,8 +353,8 @@ export default function ProductsPage() {
               <SparklesIcon className="h-8 w-8 text-primary-500" />
             </div>
             <p className="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed max-w-3xl mx-auto mb-8">
-              Discover our complete collection of premium fashion for your Labubu dolls. 
-              From casual wear to elegant pieces, find the perfect outfit for every style.
+              Discover our exclusive collection of premium Labubu doll clothes. 
+              From fantasy costumes to designer outfits, dress your Labubu in style with our carefully crafted pieces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
@@ -378,11 +506,12 @@ export default function ProductsPage() {
               {filteredAndSortedProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
-                  variants={fadeInUp}
-                  className={`group bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 ${
-                    viewMode === 'list' ? 'flex gap-6' : ''
-                  }`}
+                  variants={scaleIn}
                 >
+                  <Link href={`/products/${product.id}`} className="block">
+                    <div className={`group bg-white dark:bg-dark-800 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer ${
+                      viewMode === 'list' ? 'flex gap-6' : ''
+                    }`}>
                   <div className={`relative overflow-hidden ${viewMode === 'list' ? 'w-48 flex-shrink-0' : 'aspect-square'}`}>
                     <Image
                       src={product.image}
@@ -390,14 +519,20 @@ export default function ProductsPage() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    {product.isNew && (
-                      <span className="absolute top-3 left-3 bg-primary-500 text-white text-xs font-medium px-2 py-1 rounded-full">
-                        New
+                    {product.badge && (
+                      <span className={`absolute top-3 left-3 text-white text-xs font-medium px-2 py-1 rounded-full ${
+                        product.badge === 'New Arrival' ? 'bg-green-500' :
+                        product.badge === 'Best Seller' ? 'bg-primary-500' :
+                        product.badge === 'Limited Edition' ? 'bg-purple-500' :
+                        product.badge === 'Premium' ? 'bg-gold-500' :
+                        'bg-secondary-500'
+                      }`}>
+                        {product.badge}
                       </span>
                     )}
-                    {product.discount && (
+                    {product.originalPrice && (
                       <span className="absolute top-3 right-3 bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full">
-                        -{product.discount}%
+                        -{Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}%
                       </span>
                     )}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
@@ -445,7 +580,7 @@ export default function ProductsPage() {
                     {viewMode === 'list' && (
                       <div className="mt-4">
                         <p className="text-secondary-600 dark:text-secondary-400 text-sm mb-4">
-                          {product.description || 'Stylish and comfortable outfit perfect for any occasion.'}
+                          {`${product.name} - A stylish ${product.category.toLowerCase()} perfect for any occasion. Features ${product.tags && product.tags.length > 0 ? product.tags.slice(0, 2).join(' and ') : 'modern'} design elements.`}
                         </p>
                         <button className="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition-colors">
                           Add to Cart
@@ -453,6 +588,8 @@ export default function ProductsPage() {
                       </div>
                     )}
                   </div>
+                    </div>
+                  </Link>
                 </motion.div>
               ))}
             </motion.div>
