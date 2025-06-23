@@ -824,17 +824,22 @@ export default function ProductDetailPage() {
             </div>
             
             {/* Social Proof */}
-            <div className="flex items-center gap-6 py-3 px-4 bg-secondary-50 dark:bg-dark-700 rounded-lg">
-              <div className="flex items-center gap-2">
-                <ShoppingBagIcon className="h-5 w-5 text-primary-500" />
-                <span className="text-sm font-medium text-secondary-900 dark:text-white">
-                  {product.purchaseCount} bought in last 7 days
-                </span>
-              </div>
-              <div className="flex items-center gap-2">
-                <HeartIcon className="h-5 w-5 text-red-500" />
-                <span className="text-sm font-medium text-secondary-900 dark:text-white">
-                  {product.wishlistCount} wishlisted in last 7 days
+            <div className="bg-secondary-50 dark:bg-secondary-800/50 rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <ShoppingBagIcon className="h-5 w-5 text-primary-500" />
+                    <span className="font-medium text-secondary-900 dark:text-white">{product.purchaseCount}</span>
+                    <span className="text-sm text-secondary-600 dark:text-secondary-400">bought</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartIcon className="h-5 w-5 text-accent-500" />
+                    <span className="font-medium text-secondary-900 dark:text-white">{product.wishlistCount}</span>
+                    <span className="text-sm text-secondary-600 dark:text-secondary-400">wishlisted</span>
+                  </div>
+                </div>
+                <span className="text-xs text-secondary-500 dark:text-secondary-500 bg-secondary-100 dark:bg-secondary-700 px-2 py-1 rounded-full">
+                  Last 7 days
                 </span>
               </div>
             </div>
