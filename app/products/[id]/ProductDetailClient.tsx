@@ -39,6 +39,8 @@ const getProductById = (id: string) => {
       ],
       colors: ['#FFB6C1', '#FF69B4', '#FFC0CB'],
       sizes: ['XS', 'S', 'M'],
+      purchaseCount: 142,
+      wishlistCount: 298,
       features: [
         "Premium cotton blend fabric",
         "Hand-sewn details",
@@ -70,6 +72,8 @@ const getProductById = (id: string) => {
       ],
       colors: ['#2F1B69', '#000000', '#4B0082'],
       sizes: ['XS', 'S', 'M'],
+      purchaseCount: 67,
+      wishlistCount: 189,
       features: [
         "Intricate lace details",
         "Velvet ribbon accents",
@@ -99,7 +103,9 @@ const relatedProducts = [
     image: "/images/products/fairy-princess.jpg",
     rating: 4.7,
     reviews: 156,
-    colors: ['#87CEEB', '#FFB6C1', '#DDA0DD']
+    colors: ['#87CEEB', '#FFB6C1', '#DDA0DD'],
+    purchaseCount: 89,
+    wishlistCount: 234
   },
   {
     id: 4,
@@ -108,7 +114,9 @@ const relatedProducts = [
     image: "/images/products/street-style.jpg",
     rating: 4.6,
     reviews: 203,
-    colors: ['#FF6347', '#32CD32', '#1E90FF']
+    colors: ['#FF6347', '#32CD32', '#1E90FF'],
+    purchaseCount: 156,
+    wishlistCount: 187
   }
 ]
 
@@ -287,6 +295,27 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
               <span className="text-sm text-secondary-600 dark:text-secondary-400">
                 {product.rating} ({product.reviews} reviews)
               </span>
+            </div>
+            
+            {/* Social Proof */}
+            <div className="bg-secondary-50 dark:bg-secondary-800/50 rounded-lg p-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <ShoppingBagIcon className="h-5 w-5 text-primary-500" />
+                    <span className="font-medium text-secondary-900 dark:text-white">{product.purchaseCount}</span>
+                    <span className="text-sm text-secondary-600 dark:text-secondary-400">bought</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <HeartIcon className="h-5 w-5 text-accent-500" />
+                    <span className="font-medium text-secondary-900 dark:text-white">{product.wishlistCount}</span>
+                    <span className="text-sm text-secondary-600 dark:text-secondary-400">wishlisted</span>
+                  </div>
+                </div>
+                <span className="text-xs text-secondary-500 dark:text-secondary-500 bg-secondary-100 dark:bg-secondary-700 px-2 py-1 rounded-full">
+                  Last 7 days
+                </span>
+              </div>
             </div>
             
             {/* Product Name */}

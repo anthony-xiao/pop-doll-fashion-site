@@ -41,6 +41,8 @@ const getProductById = (id: string) => {
       ],
       colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA'],
       sizes: ['One Size'],
+      purchaseCount: 127,
+      wishlistCount: 89,
       features: [
         "Premium fantasy fabric",
         "Hand-crafted details",
@@ -74,6 +76,8 @@ const getProductById = (id: string) => {
       ],
       colors: ['#FFD700', '#FFFFFF', '#87CEEB'],
       sizes: ['One Size'],
+      purchaseCount: 98,
+      wishlistCount: 76,
       features: [
         "Celestial wing design",
         "Golden halo accessory",
@@ -599,7 +603,9 @@ const relatedProducts = [
     rating: 4.7,
     reviews: 156,
     badge: "Popular",
-    colors: ['#000080', '#C0C0C0', '#FFD700']
+    colors: ['#000080', '#C0C0C0', '#FFD700'],
+    purchaseCount: 89,
+    wishlistCount: 67
   },
   {
     id: 4,
@@ -610,7 +616,9 @@ const relatedProducts = [
     rating: 4.8,
     reviews: 203,
     badge: "Trending",
-    colors: ['#000000', '#FFFFFF', '#FF69B4']
+    colors: ['#000000', '#FFFFFF', '#FF69B4'],
+    purchaseCount: 124,
+    wishlistCount: 95
   },
   {
     id: 5,
@@ -621,7 +629,9 @@ const relatedProducts = [
     rating: 4.9,
     reviews: 178,
     badge: "New",
-    colors: ['#FFFFFF', '#FFB6C1', '#E6E6FA']
+    colors: ['#FFFFFF', '#FFB6C1', '#E6E6FA'],
+    purchaseCount: 156,
+    wishlistCount: 112
   },
   {
     id: 6,
@@ -632,7 +642,9 @@ const relatedProducts = [
     rating: 4.6,
     reviews: 145,
     badge: "Sweet",
-    colors: ['#8B4513', '#DEB887', '#F4A460']
+    colors: ['#8B4513', '#DEB887', '#F4A460'],
+    purchaseCount: 73,
+    wishlistCount: 58
   }
 ]
 
@@ -809,6 +821,22 @@ export default function ProductDetailPage() {
               <span className="text-sm text-secondary-600 dark:text-secondary-400">
                 {product.rating} ({product.reviews} reviews)
               </span>
+            </div>
+            
+            {/* Social Proof */}
+            <div className="flex items-center gap-6 py-3 px-4 bg-secondary-50 dark:bg-dark-700 rounded-lg">
+              <div className="flex items-center gap-2">
+                <ShoppingBagIcon className="h-5 w-5 text-primary-500" />
+                <span className="text-sm font-medium text-secondary-900 dark:text-white">
+                  {product.purchaseCount} bought in last 7 days
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <HeartIcon className="h-5 w-5 text-red-500" />
+                <span className="text-sm font-medium text-secondary-900 dark:text-white">
+                  {product.wishlistCount} wishlisted in last 7 days
+                </span>
+              </div>
             </div>
             
             {/* Product Name */}

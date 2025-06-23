@@ -168,18 +168,18 @@ export default function AboutPage() {
               variants={slideInLeft}
             >
               <h1 className="text-5xl lg:text-7xl font-display font-bold leading-tight mb-6">
-                <span className="gradient-text">About Pop Doll</span>
+                Bringing <span className="gradient-text">Designer</span> & Personalization to Everyone
               </h1>
               <p className="text-xl text-secondary-600 dark:text-secondary-300 leading-relaxed mb-8">
-                We're passionate creators dedicated to bringing high-fashion to the world of collectible dolls. 
-                Every piece tells a story, every design sparks joy.
+                We believe exceptional design and personal touch shouldn't be exclusive. 
+                From collectibles to custom creations, we make designer quality accessible to all.
               </p>
               <div className="flex items-center gap-6">
                 <Link href="/collections" className="btn-primary">
-                  Explore Collections
+                  Explore Our Work
                 </Link>
                 <Link href="/contact" className="btn-secondary">
-                  Get in Touch
+                  Start Personalizing
                 </Link>
               </div>
             </motion.div>
@@ -214,36 +214,90 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-white dark:bg-dark-900">
-        <div className="container-max section-padding">
+      {/* Vision & Mission Section */}
+      <section className="py-20 bg-white dark:bg-dark-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-50/30 to-accent-50/30 dark:from-primary-900/10 dark:to-accent-900/10"></div>
+        
+        <div className="container-max section-padding relative">
           <motion.div
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="text-center mb-16"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-secondary-900 dark:text-white mb-6">
+              Our <span className="gradient-text">Mission</span>
+            </h2>
+            <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-4xl mx-auto leading-relaxed">
+              To democratize exceptional design and make personalized, high-quality creations accessible to everyone, 
+              bringing designer-level craftsmanship to collectibles and custom pieces alike.
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid lg:grid-cols-2 gap-16 items-center"
             initial="initial"
             whileInView="animate"
             viewport={{ once: true }}
             variants={staggerContainer}
           >
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon
-              return (
-                <motion.div
-                  key={index}
-                  variants={scaleIn}
-                  className="text-center group"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <IconComponent className="h-8 w-8 text-white" />
+            <motion.div variants={slideInLeft} className="space-y-8">
+              <div className="bg-gradient-to-br from-white to-primary-50/50 dark:from-dark-800 dark:to-primary-900/20 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <HeartIcon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-3xl font-bold text-secondary-900 dark:text-white mb-2">
-                    {stat.number}
-                  </h3>
-                  <p className="text-secondary-600 dark:text-secondary-400">
-                    {stat.label}
-                  </p>
-                </motion.div>
-              )
-            })}
+                  <div>
+                    <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-3">
+                      Design for Everyone
+                    </h3>
+                    <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                      We believe great design shouldn't be limited by budget or scale. Whether it's a custom piece for your collection or a personalized creation, we bring the same level of artistry and attention to detail.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-white to-accent-50/50 dark:from-dark-800 dark:to-accent-900/20 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-accent-500 to-primary-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                    <SparklesIcon className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-3">
+                      Personalization at Scale
+                    </h3>
+                    <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                      Through innovative processes and dedicated craftsmanship, we make it possible to offer truly personalized experiences. Every creation is tailored to reflect individual style and preferences.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div variants={slideInRight} className="relative">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden">
+                <Image
+                  src="/images/vision-collage.webp"
+                  alt="Pop Doll Fashion Vision"
+                  width={500}
+                  height={625}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 dark:bg-dark-800/90 backdrop-blur-sm rounded-2xl p-6">
+                    <p className="text-secondary-900 dark:text-white font-medium text-lg leading-relaxed">
+                      "Great design and personal touch should be accessible to everyone, not just the privileged few."
+                    </p>
+                    <p className="text-primary-600 dark:text-primary-400 font-semibold mt-2">
+                      - Pop Doll Team
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -259,58 +313,84 @@ export default function AboutPage() {
             variants={fadeInUp}
           >
             <h2 className="text-4xl lg:text-5xl font-display font-bold text-secondary-900 dark:text-white mb-6">
-              Our Story
+              Our <span className="gradient-text">Story</span>
             </h2>
             <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto">
-              From a small passion project to a global community of fashion enthusiasts
+              Born from a belief that exceptional design and personalization should be accessible to everyone
             </p>
           </motion.div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-accent-500 rounded-full"></div>
-            
+          <motion.div
+            className="grid lg:grid-cols-3 gap-8 mb-16"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
             <motion.div
-              className="space-y-16"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={staggerContainer}
+              variants={fadeInUp}
+              className="bg-white dark:bg-dark-900 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
-              {timeline.map((item, index) => {
-                const IconComponent = item.icon
-                const isEven = index % 2 === 0
-                
-                return (
-                  <motion.div
-                    key={index}
-                    variants={isEven ? slideInLeft : slideInRight}
-                    className={`flex items-center ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
-                  >
-                    <div className={`flex-1 ${isEven ? 'lg:pr-16' : 'lg:pl-16'}`}>
-                      <div className={`bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg ${isEven ? 'lg:text-right' : 'lg:text-left'}`}>
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
-                            <IconComponent className="h-6 w-6 text-white" />
-                          </div>
-                          <span className="text-2xl font-bold text-primary-600">{item.year}</span>
-                        </div>
-                        <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-3">
-                          {item.title}
-                        </h3>
-                        <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <div className="relative z-10 w-6 h-6 bg-white dark:bg-dark-900 border-4 border-primary-500 rounded-full flex-shrink-0"></div>
-                    
-                    <div className="flex-1"></div>
-                  </motion.div>
-                )
-              })}
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <HeartIcon className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-4">
+                The Vision
+              </h3>
+              <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                It all began with a simple belief: "Why should exceptional design and personalization be exclusive to luxury markets?" We set out to democratize access to designer-quality creations for everyone.
+              </p>
             </motion.div>
-          </div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white dark:bg-dark-900 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <SparklesIcon className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-4">
+                The Innovation
+              </h3>
+              <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                We developed innovative processes that bring designer-level craftsmanship to accessible price points. Every piece reflects our commitment to quality, whether it's a collectible item or a custom creation.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeInUp}
+              className="bg-white dark:bg-dark-900 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <UserGroupIcon className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-4">
+                The Community
+              </h3>
+              <p className="text-secondary-600 dark:text-secondary-400 leading-relaxed">
+                What started as a mission to make design accessible has grown into a community of people who value quality, personalization, and the joy of owning something truly unique and well-crafted.
+              </p>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            className="bg-gradient-to-br from-primary-500 via-primary-600 to-accent-600 rounded-3xl p-12 text-white text-center relative overflow-hidden"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            variants={scaleIn}
+          >
+            <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-20"></div>
+            <div className="relative z-10">
+              <h3 className="text-3xl lg:text-4xl font-bold mb-6">
+                Today & Tomorrow
+              </h3>
+              <p className="text-xl text-primary-100 leading-relaxed max-w-4xl mx-auto">
+                We're just getting started. Every day brings new opportunities to make exceptional design more accessible, new ways to personalize experiences, and innovative approaches to democratize quality craftsmanship. 
+                Our mission remains clear: to bring designer-level quality and personalization to everyone, everywhere.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -363,77 +443,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-secondary-50 dark:bg-dark-800">
-        <div className="container-max section-padding">
-          <motion.div
-            className="text-center mb-16"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={fadeInUp}
-          >
-            <h2 className="text-4xl lg:text-5xl font-display font-bold text-secondary-900 dark:text-white mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-secondary-600 dark:text-secondary-300 max-w-3xl mx-auto">
-              The passionate individuals behind every beautiful design
-            </p>
-          </motion.div>
 
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                variants={scaleIn}
-                className="bg-white dark:bg-dark-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group"
-              >
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={300}
-                    height={300}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-primary-600 dark:text-primary-400 font-medium mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-secondary-600 dark:text-secondary-400 text-sm leading-relaxed mb-4">
-                    {member.bio}
-                  </p>
-                  <div className="flex gap-3">
-                    {Object.entries(member.social).map(([platform, handle]) => (
-                      <a
-                        key={platform}
-                        href={`#`}
-                        className="text-secondary-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                        title={`${platform}: ${handle}`}
-                      >
-                        <span className="text-xs bg-secondary-100 dark:bg-dark-700 px-2 py-1 rounded-full">
-                          {platform}
-                        </span>
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 text-white relative overflow-hidden">
@@ -448,23 +458,23 @@ export default function AboutPage() {
             variants={fadeInUp}
           >
             <h2 className="text-4xl lg:text-5xl font-display font-bold mb-6">
-              Join Our Fashion Journey
+              Join Our Design Revolution
             </h2>
             <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-              Be part of a community that celebrates creativity, craftsmanship, and the joy of collecting.
+              Be part of a community that believes exceptional design and personalization should be accessible to everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/collections" 
                 className="bg-white text-primary-600 hover:bg-primary-50 px-8 py-4 rounded-xl font-semibold transition-colors"
               >
-                Shop Now
+                Explore Our Work
               </Link>
               <Link 
-                href="/signup" 
+                href="/custom" 
                 className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-xl font-semibold transition-colors"
               >
-                Join Newsletter
+                Start Personalizing
               </Link>
             </div>
           </motion.div>

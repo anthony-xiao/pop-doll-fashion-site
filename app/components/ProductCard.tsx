@@ -25,6 +25,8 @@ interface Product {
   badge?: string
   colors?: string[]
   sizes?: string[]
+  purchaseCount: number
+  wishlistCount: number
 }
 
 interface ProductCardProps {
@@ -224,6 +226,18 @@ export function ProductCard({ product, className = '' }: ProductCardProps) {
                 ${product.originalPrice.toFixed(2)}
               </span>
             )}
+          </div>
+
+          {/* Social Proof */}
+          <div className="flex items-center justify-between text-xs text-secondary-600 dark:text-secondary-400 mt-2 pt-2 border-t border-secondary-200 dark:border-dark-600">
+            <div className="flex items-center gap-1">
+              <ShoppingBagIcon className="h-3 w-3" />
+              <span>{product.purchaseCount} bought (7d)</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <HeartIcon className="h-3 w-3" />
+              <span>{product.wishlistCount} wishlisted (7d)</span>
+            </div>
           </div>
         </div>
       </Link>

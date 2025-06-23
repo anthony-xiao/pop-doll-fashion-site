@@ -55,7 +55,9 @@ const allProducts = [
     colors: ['#FFFFFF', '#F0F8FF', '#E6E6FA'],
     category: "Fantasy",
     tags: ["white", "forest", "fantasy", "elegant"],
-    description: "Transform your beloved 17cm Labubu into an enchanting forest fairy with this ethereal White Forest Fantasy Set! 🌟 Perfect for the viral Labubu trend sweeping social media, this dreamy outfit features delicate white fabrics with mystical forest-inspired details. Join millions of Labubu collectors worldwide who are styling their dolls in the most Instagram-worthy outfits. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the star of every photo!"
+    description: "Transform your beloved 17cm Labubu into an enchanting forest fairy with this ethereal White Forest Fantasy Set! 🌟 Perfect for the viral Labubu trend sweeping social media, this dreamy outfit features delicate white fabrics with mystical forest-inspired details. Join millions of Labubu collectors worldwide who are styling their dolls in the most Instagram-worthy outfits. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the star of every photo!",
+    purchaseCount: 127,
+    wishlistCount: 89
   },
   {
     id: 2,
@@ -69,7 +71,9 @@ const allProducts = [
     colors: ['#FFD700', '#FFFFFF', '#87CEEB'],
     category: "Fantasy",
     tags: ["archangel", "divine", "celestial", "wings"],
-    description: "Elevate your 17cm Labubu to heavenly heights with this stunning Archangel Divine Costume! ✨ This limited edition piece is taking the Labubu community by storm with its golden wings and celestial details. As the Labubu craze continues to dominate TikTok and Instagram, make sure your doll stands out with this divine outfit. Crafted exclusively for 17cm Labubu dolls - because every Labubu deserves to be an angel in the spotlight!"
+    description: "Elevate your 17cm Labubu to heavenly heights with this stunning Archangel Divine Costume! ✨ This limited edition piece is taking the Labubu community by storm with its golden wings and celestial details. As the Labubu craze continues to dominate TikTok and Instagram, make sure your doll stands out with this divine outfit. Crafted exclusively for 17cm Labubu dolls - because every Labubu deserves to be an angel in the spotlight!",
+    purchaseCount: 98,
+    wishlistCount: 76
   },
   {
     id: 3,
@@ -83,7 +87,9 @@ const allProducts = [
     colors: ['#000080', '#C0C0C0', '#FFD700'],
     category: "Costume",
     tags: ["rabbit", "officer", "uniform", "professional"],
-    description: "Your 17cm Labubu is ready to serve and protect in this adorable Rabbit Officer Uniform! 🐰👮 Join the global Labubu phenomenon with this viral costume that's perfect for creating those trending 'Labubu at work' posts. The detailed uniform design captures hearts across social platforms, making your Labubu the most professional cutie on the block. Tailored specifically for 17cm Labubu dolls - because being part of the Labubu trend means having the perfect outfit for every occasion!"
+    description: "Your 17cm Labubu is ready to serve and protect in this adorable Rabbit Officer Uniform! 🐰👮 Join the global Labubu phenomenon with this viral costume that's perfect for creating those trending 'Labubu at work' posts. The detailed uniform design captures hearts across social platforms, making your Labubu the most professional cutie on the block. Tailored specifically for 17cm Labubu dolls - because being part of the Labubu trend means having the perfect outfit for every occasion!",
+    purchaseCount: 84,
+    wishlistCount: 62
   },
   {
     id: 4,
@@ -97,7 +103,9 @@ const allProducts = [
     colors: ['#000000', '#FFFFFF', '#FF69B4'],
     category: "Costume",
     tags: ["maid", "elegant", "classic", "traditional"],
-    description: "Give your 17cm Labubu the ultimate kawaii makeover with this Elegant Maid Outfit! 🎀 This trending costume is a must-have for every Labubu enthusiast riding the viral wave. Perfect for those adorable 'Labubu café' photoshoots that are breaking the internet! The classic black and white design with pink accents captures the essence of Japanese pop culture that makes Labubu so irresistible. Designed exclusively for 17cm Labubu dolls - because your Labubu deserves to serve looks, not just tea!"
+    description: "Give your 17cm Labubu the ultimate kawaii makeover with this Elegant Maid Outfit! 🎀 This trending costume is a must-have for every Labubu enthusiast riding the viral wave. Perfect for those adorable 'Labubu café' photoshoots that are breaking the internet! The classic black and white design with pink accents captures the essence of Japanese pop culture that makes Labubu so irresistible. Designed exclusively for 17cm Labubu dolls - because your Labubu deserves to serve looks, not just tea!",
+    purchaseCount: 112,
+    wishlistCount: 93
   },
   {
     id: 5,
@@ -111,7 +119,9 @@ const allProducts = [
     colors: ['#FFFFFF', '#FFB6C1', '#E6E6FA'],
     category: "Fantasy",
     tags: ["swan", "ballet", "graceful", "dance"],
-    description: "Watch your 17cm Labubu pirouette into everyone's hearts with this enchanting Little Swan Ballet Set! 🩰✨ This new arrival is already becoming a sensation in the Labubu community, perfect for creating those dreamy ballet-themed content that's trending everywhere. The delicate tutu and graceful design embody the elegance that makes Labubu collecting so addictive. Crafted specifically for 17cm Labubu dolls - because every Labubu deserves to dance their way to viral fame!"
+    description: "Watch your 17cm Labubu pirouette into everyone's hearts with this enchanting Little Swan Ballet Set! 🩰✨ This new arrival is already becoming a sensation in the Labubu community, perfect for creating those dreamy ballet-themed content that's trending everywhere. The delicate tutu and graceful design embody the elegance that makes Labubu collecting so addictive. Crafted specifically for 17cm Labubu dolls - because every Labubu deserves to dance their way to viral fame!",
+    purchaseCount: 73,
+    wishlistCount: 58
   },
   {
     id: 6,
@@ -125,7 +135,9 @@ const allProducts = [
     colors: ['#8B4513', '#DEB887', '#F4A460'],
     category: "Casual",
     tags: ["donut", "sweet", "casual", "playful"],
-    description: "Satisfy your 17cm Labubu's sweet tooth with this irresistible Brown Donut Casual Set! 🍩 This playful outfit is perfect for joining the Labubu food trend that's taking over social media feeds worldwide. The adorable donut-inspired design captures the whimsical spirit that makes Labubu culture so beloved by millions. Whether you're creating content or just enjoying your collection, this outfit screams 'sweet vibes only!' Designed specifically for 17cm Labubu dolls - because life's too short for boring outfits!"
+    description: "Satisfy your 17cm Labubu's sweet tooth with this irresistible Brown Donut Casual Set! 🍩 This playful outfit is perfect for joining the Labubu food trend that's taking over social media feeds worldwide. The adorable donut-inspired design captures the whimsical spirit that makes Labubu culture so beloved by millions. Whether you're creating content or just enjoying your collection, this outfit screams 'sweet vibes only!' Designed specifically for 17cm Labubu dolls - because life's too short for boring outfits!",
+    purchaseCount: 67,
+    wishlistCount: 45
   },
   {
     id: 7,
@@ -139,7 +151,9 @@ const allProducts = [
     colors: ['#FFFFFF', '#FFB6C1', '#87CEEB'],
     category: "Costume",
     tags: ["mouse", "white", "happy", "cute"],
-    description: "Spread pure joy with your 17cm Labubu in this adorable White Happy Mouse Costume! 🐭💕 This cute outfit is melting hearts across the Labubu community and is perfect for those 'happiness overload' posts that define the Labubu trend. The cheerful mouse design with its innocent charm captures exactly why millions are obsessed with Labubu culture. Get ready for endless 'awws' and viral potential! Designed specifically for 17cm Labubu dolls - because happiness looks even cuter on a Labubu!"
+    description: "Spread pure joy with your 17cm Labubu in this adorable White Happy Mouse Costume! 🐭💕 This cute outfit is melting hearts across the Labubu community and is perfect for those 'happiness overload' posts that define the Labubu trend. The cheerful mouse design with its innocent charm captures exactly why millions are obsessed with Labubu culture. Get ready for endless 'awws' and viral potential! Designed specifically for 17cm Labubu dolls - because happiness looks even cuter on a Labubu!",
+    purchaseCount: 91,
+    wishlistCount: 71
   },
   {
     id: 8,
@@ -153,7 +167,9 @@ const allProducts = [
     colors: ['#FF69B4', '#FFB6C1', '#FF1493'],
     category: "Casual",
     tags: ["pink", "colorful", "vibrant", "trendy"],
-    description: "Make your 17cm Labubu the star of every rainbow with this vibrant Pink Little Colorful Set! 🌈✨ This eye-catching outfit is dominating the Labubu fashion scene and is perfect for those bold, colorful posts that get maximum engagement. The playful pink palette embodies the fun, expressive spirit that makes the Labubu trend so irresistible to Gen Z and millennials alike. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to shine in technicolor!"
+    description: "Make your 17cm Labubu the star of every rainbow with this vibrant Pink Little Colorful Set! 🌈✨ This eye-catching outfit is dominating the Labubu fashion scene and is perfect for those bold, colorful posts that get maximum engagement. The playful pink palette embodies the fun, expressive spirit that makes the Labubu trend so irresistible to Gen Z and millennials alike. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to shine in technicolor!",
+    purchaseCount: 105,
+    wishlistCount: 87
   },
   {
     id: 9,
@@ -167,7 +183,9 @@ const allProducts = [
     colors: ['#0000FF', '#87CEEB', '#4169E1'],
     category: "Costume",
     tags: ["fish", "ocean", "blue", "playful"],
-    description: "Dive into the Labubu ocean trend with your 17cm Labubu wearing this playful Blue Big Mouth Fish Costume! 🐟🌊 This quirky outfit is making waves in the Labubu community and is perfect for those underwater-themed photoshoots that are trending on social platforms. The adorable fish design captures the whimsical, slightly weird charm that makes Labubu culture so uniquely lovable. Designed specifically for 17cm Labubu dolls - because even fish want to be part of the Labubu phenomenon!"
+    description: "Dive into the Labubu ocean trend with your 17cm Labubu wearing this playful Blue Big Mouth Fish Costume! 🐟🌊 This quirky outfit is making waves in the Labubu community and is perfect for those underwater-themed photoshoots that are trending on social platforms. The adorable fish design captures the whimsical, slightly weird charm that makes Labubu culture so uniquely lovable. Designed specifically for 17cm Labubu dolls - because even fish want to be part of the Labubu phenomenon!",
+    purchaseCount: 56,
+    wishlistCount: 39
   },
   {
     id: 10,
@@ -181,7 +199,9 @@ const allProducts = [
     colors: ['#FFFFFF', '#FFD700', '#F5F5DC'],
     category: "Formal",
     tags: ["luxury", "gold", "white", "elegant"],
-    description: "Dress your 17cm Labubu for success with this stunning Gold V White Luxury Suit! 👑✨ This premium outfit is the crown jewel of Labubu fashion, perfect for those 'CEO Labubu' posts that are taking LinkedIn and Instagram by storm. The sophisticated gold and white design elevates the Labubu trend to luxury status, proving that collectible culture can be both cute and classy. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to look like the million-dollar trend it represents!"
+    description: "Dress your 17cm Labubu for success with this stunning Gold V White Luxury Suit! 👑✨ This premium outfit is the crown jewel of Labubu fashion, perfect for those 'CEO Labubu' posts that are taking LinkedIn and Instagram by storm. The sophisticated gold and white design elevates the Labubu trend to luxury status, proving that collectible culture can be both cute and classy. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to look like the million-dollar trend it represents!",
+    purchaseCount: 129,
+    wishlistCount: 108
   },
   {
     id: 11,
@@ -195,7 +215,9 @@ const allProducts = [
     colors: ['#FF0000', '#0000FF', '#FFFF00'],
     category: "Costume",
     tags: ["mario", "gaming", "adventure", "classic"],
-    description: "Level up your 17cm Labubu's style with this iconic Mario Adventure Costume! 🍄🎮 This gaming-inspired outfit is a hit in the Labubu community, perfect for those nostalgic crossover posts that blend childhood memories with the current Labubu obsession. The classic red and blue design brings together two beloved pop culture phenomena in one irresistible package. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the ultimate gaming icon!"
+    description: "Level up your 17cm Labubu's style with this iconic Mario Adventure Costume! 🍄🎮 This gaming-inspired outfit is a hit in the Labubu community, perfect for those nostalgic crossover posts that blend childhood memories with the current Labubu obsession. The classic red and blue design brings together two beloved pop culture phenomena in one irresistible package. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the ultimate gaming icon!",
+    purchaseCount: 88,
+    wishlistCount: 72
   },
   {
     id: 12,
@@ -209,7 +231,9 @@ const allProducts = [
     colors: ['#000000', '#808080', '#FFFFFF'],
     category: "Formal",
     tags: ["formal", "plaid", "professional", "elegant"],
-    description: "Transform your 17cm Labubu into a fashion mogul with this sophisticated Black Plaid Formal Suit! 🖤✨ This premium outfit is redefining the Labubu trend by proving that cute can also be corporate chic. Perfect for those 'business Labubu' posts that are gaining traction among professional collectors who want to showcase their style in the office. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to dress for the job it wants!"
+    description: "Transform your 17cm Labubu into a fashion mogul with this sophisticated Black Plaid Formal Suit! 🖤✨ This premium outfit is redefining the Labubu trend by proving that cute can also be corporate chic. Perfect for those 'business Labubu' posts that are gaining traction among professional collectors who want to showcase their style in the office. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to dress for the job it wants!",
+    purchaseCount: 64,
+    wishlistCount: 51
   },
   {
     id: 13,
@@ -223,7 +247,9 @@ const allProducts = [
     colors: ['#000000', '#FF69B4', '#32CD32'],
     category: "Casual",
     tags: ["chic", "colorful", "modern", "trendy"],
-    description: "Give your 17cm Labubu an edgy makeover with this chic Black Little Colorful Set! 🖤🌈 This modern outfit is perfect for the fashion-forward Labubu collector who wants to stand out in the trend. The striking black base with colorful accents creates that perfect 'dark academia meets pop culture' vibe that's dominating social feeds. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the coolest trendsetter in the room!"
+    description: "Give your 17cm Labubu an edgy makeover with this chic Black Little Colorful Set! 🖤🌈 This modern outfit is perfect for the fashion-forward Labubu collector who wants to stand out in the trend. The striking black base with colorful accents creates that perfect 'dark academia meets pop culture' vibe that's dominating social feeds. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be the coolest trendsetter in the room!",
+    purchaseCount: 79,
+    wishlistCount: 63
   },
   {
     id: 14,
@@ -237,7 +263,9 @@ const allProducts = [
     colors: ['#FF0000', '#FFFFFF', '#000000'],
     category: "Designer",
     tags: ["designer", "plaid", "red", "premium"],
-    description: "Elevate your 17cm Labubu to designer status with this exclusive C Brand Red Plaid Set! 🔥👗 This premium outfit brings high fashion to the Labubu world, perfect for those luxury lifestyle posts that showcase the sophisticated side of the Labubu trend. The iconic red plaid pattern screams designer elegance while maintaining that adorable Labubu charm. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to wear the same brands as the fashion elite!"
+    description: "Elevate your 17cm Labubu to designer status with this exclusive C Brand Red Plaid Set! 🔥👗 This premium outfit brings high fashion to the Labubu world, perfect for those luxury lifestyle posts that showcase the sophisticated side of the Labubu trend. The iconic red plaid pattern screams designer elegance while maintaining that adorable Labubu charm. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to wear the same brands as the fashion elite!",
+    purchaseCount: 95,
+    wishlistCount: 78
   },
   {
     id: 15,
@@ -251,7 +279,9 @@ const allProducts = [
     colors: ['#000000', '#2F2F2F', '#4A4A4A'],
     category: "Designer",
     tags: ["designer", "black", "dress", "elegant"],
-    description: "Dress your 17cm Labubu in timeless elegance with this stunning C Brand Black Dress! 🖤✨ This designer piece is the epitome of sophisticated Labubu fashion, perfect for those 'little black dress' moments that prove the Labubu trend transcends age and style boundaries. The sleek silhouette and premium quality make this a must-have for serious collectors. Designed specifically for 17cm Labubu dolls - because every Labubu deserves a classic that never goes out of style!"
+    description: "Dress your 17cm Labubu in timeless elegance with this stunning C Brand Black Dress! 🖤✨ This designer piece is the epitome of sophisticated Labubu fashion, perfect for those 'little black dress' moments that prove the Labubu trend transcends age and style boundaries. The sleek silhouette and premium quality make this a must-have for serious collectors. Designed specifically for 17cm Labubu dolls - because every Labubu deserves a classic that never goes out of style!",
+    purchaseCount: 118,
+    wishlistCount: 96
   },
   {
     id: 16,
@@ -265,7 +295,9 @@ const allProducts = [
     colors: ['#0000FF', '#4169E1', '#87CEEB'],
     category: "Designer",
     tags: ["designer", "blue", "dress", "elegant"],
-    description: "Make waves with your 17cm Labubu in this gorgeous D Brand Blue Dress! 💙🌊 This designer piece captures the serene elegance that's making the Labubu trend a global phenomenon. Perfect for those dreamy blue-themed photoshoots that are flooding social media feeds worldwide. The flowing design and premium craftsmanship prove that Labubu fashion is serious business. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to wear designer pieces that match their star status!"
+    description: "Make waves with your 17cm Labubu in this gorgeous D Brand Blue Dress! 💙🌊 This designer piece captures the serene elegance that's making the Labubu trend a global phenomenon. Perfect for those dreamy blue-themed photoshoots that are flooding social media feeds worldwide. The flowing design and premium craftsmanship prove that Labubu fashion is serious business. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to wear designer pieces that match their star status!",
+    purchaseCount: 71,
+    wishlistCount: 54
   },
   {
     id: 17,
@@ -279,7 +311,9 @@ const allProducts = [
     colors: ['#8B4513', '#A0522D', '#D2691E'],
     category: "Designer",
     tags: ["designer", "coffee", "dress", "sophisticated"],
-    description: "Brew up some style with your 17cm Labubu in this sophisticated G Brand Coffee Dress! ☕✨ This warm, earthy designer piece is perfect for those cozy aesthetic posts that showcase the versatile side of the Labubu trend. The rich coffee tones create an Instagram-worthy autumn vibe that Labubu collectors absolutely adore. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be as comforting and addictive as your morning coffee!"
+    description: "Brew up some style with your 17cm Labubu in this sophisticated G Brand Coffee Dress! ☕✨ This warm, earthy designer piece is perfect for those cozy aesthetic posts that showcase the versatile side of the Labubu trend. The rich coffee tones create an Instagram-worthy autumn vibe that Labubu collectors absolutely adore. Designed specifically for 17cm Labubu dolls - because your Labubu deserves to be as comforting and addictive as your morning coffee!",
+    purchaseCount: 52,
+    wishlistCount: 37
   }
 ]
 
