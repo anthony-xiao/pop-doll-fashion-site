@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://popdollfashion.com/sitemap.xml
+Sitemap: https://popdollfashion.com/sitemap-zh.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /checkout/
+Disallow: /cart/
+
+# Allow important pages
+Allow: /products/
+Allow: /collections/
+Allow: /about/
+Allow: /contact/

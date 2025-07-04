@@ -1,11 +1,11 @@
-import { Inter, Playfair_Display } from 'next/font/google'
-import './globals.css'
-import { ThemeProvider } from './components/ThemeProvider'
-import { CartProvider } from './contexts/CartContext'
-import { WishlistProvider } from './contexts/WishlistContext'
-import { Navigation } from './components/Navigation'
-import { Footer } from './components/Footer'
 import type { Metadata } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
+import '../globals.css'
+import { ThemeProvider } from '../components/ThemeProvider'
+import { CartProvider } from '../contexts/CartContext'
+import { WishlistProvider } from '../contexts/WishlistContext'
+import { Navigation } from '../components/Navigation'
+import { Footer } from '../components/Footer'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -21,21 +21,24 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Pop Doll Fashion - Designer Clothes for Labubu & Collectible Dolls',
+    default: 'Pop Doll Fashion - Labubu和收藏娃娃的设计师服装',
     template: '%s | Pop Doll Fashion'
   },
-  description: 'Discover premium designer clothing and accessories for Labubu dolls and collectible figures. Unique, high-quality outfits that bring your dolls to life with style and personality.',
+  description: '为Labubu娃娃和收藏人偶发现优质设计师服装和配饰。独特、高品质的服装，为您的娃娃带来时尚和个性。',
   keywords: [
+    'Labubu服装',
+    '娃娃时尚',
+    '收藏娃娃服装',
+    '设计师娃娃服装',
+    'Pop Mart配饰',
+    '迷你时尚',
+    '娃娃服装店',
+    '定制娃娃服装',
+    '奢华娃娃时尚',
+    '收藏人偶配饰',
     'Labubu clothes',
     'doll fashion',
-    'collectible doll outfits',
-    'designer doll clothes',
-    'Pop Mart accessories',
-    'miniature fashion',
-    'doll clothing store',
-    'custom doll outfits',
-    'luxury doll fashion',
-    'collectible figure accessories'
+    'collectible doll outfits'
   ],
   authors: [{ name: 'Pop Doll Fashion' }],
   creator: 'Pop Doll Fashion',
@@ -47,7 +50,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://popdollfashion.com'),
   alternates: {
-    canonical: '/',
+    canonical: '/zh',
     languages: {
       'en': '/',
       'zh': '/zh',
@@ -57,25 +60,25 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://popdollfashion.com',
-    title: 'Pop Doll Fashion - Designer Clothes for Labubu & Collectible Dolls',
-    description: 'Discover premium designer clothing and accessories for Labubu dolls and collectible figures. Unique, high-quality outfits that bring your dolls to life.',
+    locale: 'zh_CN',
+    url: 'https://popdollfashion.com/zh',
+    title: 'Pop Doll Fashion - Labubu和收藏娃娃的设计师服装',
+    description: '为Labubu娃娃和收藏人偶发现优质设计师服装和配饰。独特、高品质的服装，为您的娃娃带来时尚和个性。',
     siteName: 'Pop Doll Fashion',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image-zh.jpg',
         width: 1200,
         height: 630,
-        alt: 'Pop Doll Fashion - Designer Doll Clothes',
+        alt: 'Pop Doll Fashion - 设计师娃娃服装',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pop Doll Fashion - Designer Clothes for Labubu & Collectible Dolls',
-    description: 'Discover premium designer clothing and accessories for Labubu dolls and collectible figures.',
-    images: ['/og-image.jpg'],
+    title: 'Pop Doll Fashion - Labubu和收藏娃娃的设计师服装',
+    description: '为Labubu娃娃和收藏人偶发现优质设计师服装和配饰。',
+    images: ['/og-image-zh.jpg'],
     creator: '@popdollfashion',
   },
   robots: {
@@ -94,13 +97,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default function ZhLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
+    <html lang="zh" className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -117,9 +120,9 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Pop Doll Fashion',
-              url: 'https://popdollfashion.com',
+              url: 'https://popdollfashion.com/zh',
               logo: 'https://popdollfashion.com/logo.png',
-              description: 'Premium designer clothing and accessories for Labubu dolls and collectible figures.',
+              description: '为Labubu娃娃和收藏人偶提供优质设计师服装和配饰。',
               sameAs: [
                 'https://instagram.com/popdollfashion',
                 'https://twitter.com/popdollfashion',
